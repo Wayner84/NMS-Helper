@@ -77,6 +77,7 @@ interface AppState {
   setRefinerSlotQty: (index: number, qty: number) => void
   swapRefinerSlots: (from: number, to: number) => void
   clearRefinerSlots: () => void
+  loadRefinerRecipe: (recipeId: string) => void
   setPlannerPlatform: (platform: string) => void
   setPlannerGridSize: (rows: number, cols: number) => void
   updatePlannerSlot: (index: number, patch: Partial<PlannerSlot>) => void
@@ -146,6 +147,20 @@ export const useAppStore = create<AppState>((set) => ({
       return { refinerSlots: next }
     }),
   clearRefinerSlots: () => set({ refinerSlots: defaultRefinerSlots.map((slot) => ({ ...slot })) }),
+  loadRefinerRecipe: (recipeId) =>
+    set((state) => {
+      const recipe = state.refinerRecipes.find((entry) => entry.id === recipeId)
+      if (!recipe) return {}
+
+      const slots = state.refinerSlots.map(() => ({ itemId: null as string | null, qty: 1 }))
+      recipe.inputs.forEach((input, index) => {
+        if (index < slots.length) {
+          slots[index] = { itemId: input.item, qty: input.qty }
+        }
+      })
+
+      return { refinerSlots: slots }
+    }),
   setPlannerPlatform: (platform) =>
     set((state) => {
       const planner = { ...state.planner, platform }
