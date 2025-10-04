@@ -112,7 +112,8 @@ const Refiner = (): ReactElement => {
     setRefinerSlotItem,
     setRefinerSlotQty,
     swapRefinerSlots,
-    clearRefinerSlots
+    clearRefinerSlots,
+    loadRefinerRecipe
   } = useAppStore((state) => ({
     items: state.items,
     itemsMap: state.itemsMap,
@@ -121,10 +122,13 @@ const Refiner = (): ReactElement => {
     setRefinerSlotItem: state.setRefinerSlotItem,
     setRefinerSlotQty: state.setRefinerSlotQty,
     swapRefinerSlots: state.swapRefinerSlots,
-    clearRefinerSlots: state.clearRefinerSlots
+    clearRefinerSlots: state.clearRefinerSlots,
+    loadRefinerRecipe: state.loadRefinerRecipe
   }))
 
   const sortedItems = useMemo(() => [...items].sort((a, b) => a.name.localeCompare(b.name)), [items])
+
+  const [recipeSearch, setRecipeSearch] = useState('')
 
   const currentRecipe = useMemo<RefinerRecipe | undefined>(
     () => matchRefinerRecipe(refinerSlots, refinerRecipes),
@@ -138,6 +142,28 @@ const Refiner = (): ReactElement => {
     () => suggestRefinerChains(refinerSlots, refinerRecipes, itemsMap),
     [refinerSlots, refinerRecipes, itemsMap]
   )
+
+  const recipeMatches = useMemo(() => {
+    const query = recipeSearch.trim().toLowerCase()
+    if (!query) return []
+
+    return refinerRecipes
+      .map((recipe) => ({
+        recipe,
+        outputName: itemsMap.get(recipe.output.item)?.name ?? recipe.name ?? recipe.output.item
+      }))
+      .filter(({ recipe, outputName }) => {
+        const normalizedOutput = outputName.toLowerCase()
+        if (normalizedOutput.includes(query)) return true
+        const normalizedRecipe = recipe.name.toLowerCase()
+        if (normalizedRecipe.includes(query)) return true
+        return recipe.output.item.toLowerCase().includes(query)
+      })
+      .sort((a, b) => a.outputName.localeCompare(b.outputName))
+      .slice(0, 25)
+  }, [itemsMap, recipeSearch, refinerRecipes])
+
+  const hasRecipeQuery = recipeSearch.trim().length > 0
 
   return (
     <div className="flex flex-col gap-6">
@@ -168,6 +194,62 @@ const Refiner = (): ReactElement => {
               Drag inputs or use swap buttons to reorder. Keyboard users can Tab to a slot and press Swap buttons.
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-slate-700 bg-surface/70 p-6">
+        <div className="flex flex-col gap-4">
+          <div>
+            <h2 className="text-lg font-semibold text-slate-100">Find a recipe</h2>
+            <p className="mt-1 text-sm text-slate-400">
+              Search for an output item to autofill the refiner inputs.
+            </p>
+          </div>
+          <label className="flex flex-col gap-2 text-sm">
+            <span className="text-xs uppercase tracking-wide text-slate-500">Output item</span>
+            <input
+              type="search"
+              value={recipeSearch}
+              onChange={(event) => setRecipeSearch(event.target.value)}
+              placeholder="e.g. Living Glass"
+              className="w-full rounded border border-slate-600 bg-surface/80 px-3 py-2"
+            />
+          </label>
+          {hasRecipeQuery ? (
+            recipeMatches.length > 0 ? (
+              <ul className="mt-2 space-y-2 text-sm">
+                {recipeMatches.map(({ recipe, outputName }) => (
+                  <li key={recipe.id}>
+                    <button
+                      type="button"
+                      className="w-full rounded border border-slate-700 bg-surface/60 px-3 py-3 text-left text-slate-200 transition hover:border-primary hover:text-primary"
+                      onClick={() => {
+                        loadRefinerRecipe(recipe.id)
+                        setRecipeSearch('')
+                      }}
+                    >
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <span className="font-semibold">{outputName}</span>
+                        <span className="text-xs text-slate-400">Fill slots</span>
+                      </div>
+                      <div className="mt-1 text-xs text-slate-400">
+                        {recipe.inputs
+                          .map((input) => {
+                            const name = itemsMap.get(input.item)?.name ?? input.item
+                            return `${input.qty} × ${name}`
+                          })
+                          .join(' + ')}
+                      </div>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-slate-400">No recipes match that search. Try a different item name.</p>
+            )
+          ) : (
+            <p className="text-sm text-slate-400">Start typing to see available refining outputs.</p>
+          )}
         </div>
       </section>
 
