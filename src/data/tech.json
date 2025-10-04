@@ -1,54 +1,8148 @@
 [
   {
-    "id": "pulse_engine",
-    "name": "Pulse Engine",
+    "id": "ablative_armour",
+    "name": "Ablative Armour",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "shield"
+    ]
+  },
+  {
+    "id": "accelerated_fire_sigma",
+    "name": "Accelerated Fire Sigma",
     "platform": "starship",
     "slotType": "tech",
-    "baseValue": 120,
-    "adjacency": {
-      "pulse_engine": 20,
-      "hyperdrive": 15
-    },
-    "superchargeMultiplier": 1.3,
-    "tags": ["mobility"]
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "accelerated_fire_tau",
+    "name": "Accelerated Fire Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "accelerated_fire_theta",
+    "name": "Accelerated Fire Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "advanced_cooling_sigma",
+    "name": "Advanced Cooling Sigma",
+    "platform": "general",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": []
+  },
+  {
+    "id": "advanced_cooling_tau",
+    "name": "Advanced Cooling Tau",
+    "platform": "general",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": []
+  },
+  {
+    "id": "advanced_cooling_theta",
+    "name": "Advanced Cooling Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "advanced_exocraft_laser",
+    "name": "Advanced Exocraft Laser",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "weapon_upgrades"
+    ]
+  },
+  {
+    "id": "advanced_launch_system",
+    "name": "Advanced Launch System",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "advanced_mining_laser",
+    "name": "Advanced Mining Laser",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "advanced_translator",
+    "name": "Advanced Translator",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "aeration_membrane",
+    "name": "Aeration Membrane",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "aeration_membrane_next",
+    "name": "Aeration Membrane (NEXT)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "aeration_membrane_sigma",
+    "name": "Aeration Membrane Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "aeration_membrane_tau",
+    "name": "Aeration Membrane Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "aeration_membrane_theta",
+    "name": "Aeration Membrane Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "aeron_shield",
+    "name": "Aeron Shield",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "shield"
+    ]
+  },
+  {
+    "id": "air_filtration_unit",
+    "name": "Air Filtration Unit",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "airburst_engine",
+    "name": "Airburst Engine",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "movement"
+    ]
+  },
+  {
+    "id": "alternator",
+    "name": "Alternator",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "amplified_cartridges",
+    "name": "Amplified Cartridges",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "amplified_warp_shielding",
+    "name": "Amplified Warp Shielding",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "analysis_visor",
+    "name": "Analysis Visor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "analysis_visor_upgrade",
+    "name": "Analysis Visor Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "analysis_visor"
+    ]
+  },
+  {
+    "id": "ancient_lock",
+    "name": "Ancient Lock",
+    "platform": "artifact",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "artifact"
+    ]
+  },
+  {
+    "id": "animus_beam",
+    "name": "Animus Beam",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "anomaly_suppressor",
+    "name": "Anomaly Suppressor",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "aqua_jets",
+    "name": "Aqua-Jets",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_thruster"
+    ]
+  },
+  {
+    "id": "arc_of_cursumburg",
+    "name": "Arc of Cursumburg",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "ariadnes_flame",
+    "name": "Ariadne's Flame",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "artemis_translator",
+    "name": "Artemis' Translator",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "ashidaka_uyll_mark_xvi",
+    "name": "Ashidaka-Uyll Mark XVI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "atlantid_drive",
+    "name": "Atlantid Drive",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "atmospheric_control_unit",
+    "name": "Atmospheric Control Unit",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "life_support"
+    ]
+  },
+  {
+    "id": "automatic_translation_device",
+    "name": "Automatic translation device",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "ballistic_plating_v4",
+    "name": "Ballistic Plating V4",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "health"
+    ]
+  },
+  {
+    "id": "barrel_ioniser",
+    "name": "Barrel Ioniser",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "beam_amplifier",
+    "name": "Beam Amplifier",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_coolant_system",
+    "name": "Beam Coolant System",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_coolant_system_sigma",
+    "name": "Beam Coolant System Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "beam_coolant_system_tau",
+    "name": "Beam Coolant System Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "beam_coolant_system_theta",
+    "name": "Beam Coolant System Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "beam_focus_sigma",
+    "name": "Beam Focus Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_focus_tau",
+    "name": "Beam Focus Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_focus_theta",
+    "name": "Beam Focus Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_focus_v1",
+    "name": "Beam Focus V1",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_focus_v2",
+    "name": "Beam Focus V2",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_focus_v3",
+    "name": "Beam Focus V3",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_impact_sigma",
+    "name": "Beam Impact Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapon"
+    ]
+  },
+  {
+    "id": "beam_impact_tau",
+    "name": "Beam Impact Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapon"
+    ]
+  },
+  {
+    "id": "beam_impact_theta",
+    "name": "Beam Impact Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "beam_intensifier_sigma",
+    "name": "Beam Intensifier Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "beam_intensifier_tau",
+    "name": "Beam Intensifier Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "beam_intensifier_theta",
+    "name": "Beam Intensifier Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "bio_input_sensor",
+    "name": "Bio-Input Sensor",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "blaze_javelin",
+    "name": "Blaze Javelin",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "energy_beam"
+    ]
+  },
+  {
+    "id": "blaze_javelin_atlas",
+    "name": "Blaze Javelin (Atlas)",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "energy_beam"
+    ]
+  },
+  {
+    "id": "blaze_javelin_coolant_sigma",
+    "name": "Blaze Javelin Coolant Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_coolant_tau",
+    "name": "Blaze Javelin Coolant Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_damage_sigma",
+    "name": "Blaze Javelin Damage Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_damage_tau",
+    "name": "Blaze Javelin Damage Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_damage_theta",
+    "name": "Blaze Javelin Damage Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_drill_array_sigma",
+    "name": "Blaze Javelin Drill Array Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_drill_array_tau",
+    "name": "Blaze Javelin Drill Array Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_drill_array_theta",
+    "name": "Blaze Javelin Drill Array Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "blaze_javelin"
+    ]
+  },
+  {
+    "id": "blaze_javelin_upgrade",
+    "name": "Blaze Javelin Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "blown_transistor",
+    "name": "Blown Transistor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "boiler_unit",
+    "name": "Boiler Unit",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "boltcaster",
+    "name": "Boltcaster",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "boltcaster_atlas",
+    "name": "Boltcaster (Atlas)",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "boltcaster_clip_sigma",
+    "name": "Boltcaster Clip Sigma",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "boltcaster_clip_tau",
+    "name": "Boltcaster Clip Tau",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "boltcaster_clip_theta",
+    "name": "Boltcaster Clip Theta",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "boltcaster_ricochet_module",
+    "name": "Boltcaster Ricochet Module",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "boltcaster_sm",
+    "name": "Boltcaster SM",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "boltcaster_upgrade",
+    "name": "Boltcaster Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "bomcdevir_mark_iv",
+    "name": "Bomcdevir Mark IV",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "burnt_out_compressor",
+    "name": "Burnt-Out Compressor",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "c28_m_fading_gleam",
+    "name": "C28/M Fading Gleam",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "cadmium_drive",
+    "name": "Cadmium Drive",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "cannon_damage_sigma",
+    "name": "Cannon Damage Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cannon_damage_tau",
+    "name": "Cannon Damage Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cannon_damage_theta",
+    "name": "Cannon Damage Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cargo_scan_deflector",
+    "name": "Cargo Scan Deflector",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "interplanetary"
+    ]
+  },
+  {
+    "id": "certain_ulgadello_lulai",
+    "name": "Certain Ulgadello-Lulai",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "charge_cylinder",
+    "name": "Charge Cylinder",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "power_supply"
+    ]
+  },
+  {
+    "id": "chloroplast_membrane",
+    "name": "Chloroplast Membrane",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_system"
+    ]
+  },
+  {
+    "id": "chloroplast_membrane_implant",
+    "name": "Chloroplast Membrane Implant",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_system"
+    ]
+  },
+  {
+    "id": "chromatic_warp_shielding",
+    "name": "Chromatic Warp Shielding",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "ci8_m66_vibrant_casting",
+    "name": "CI8/M66 Vibrant Casting",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "clarity_of_totaguri",
+    "name": "Clarity of Totaguri",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "cloaking_device",
+    "name": "Cloaking Device",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "combat_amplifier_omega",
+    "name": "Combat Amplifier Omega",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "combat_amplifier_sigma",
+    "name": "Combat Amplifier Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "combat_amplifier_tau",
+    "name": "Combat Amplifier Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "combat_amplifier_theta",
+    "name": "Combat Amplifier Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "mining_beam"
+    ]
+  },
+  {
+    "id": "combat_scope",
+    "name": "Combat Scope",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "precision"
+    ]
+  },
+  {
+    "id": "comforting_luovutus_purc",
+    "name": "Comforting Luovutus Purc",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "comforting_magarzello",
+    "name": "Comforting Magarzello",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "comforting_theory_x",
+    "name": "Comforting Theory X",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "complete_casting_xiii",
+    "name": "Complete Casting XIII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "concept_of_signasin_xuccl",
+    "name": "Concept of Signasin-Xuccl",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "conflict_scanner",
+    "name": "Conflict Scanner",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "scanner"
+    ]
+  },
+  {
+    "id": "containment_failure",
+    "name": "Containment Failure",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "coolant_network",
+    "name": "Coolant Network",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "coolant_network_next",
+    "name": "Coolant Network (NEXT)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "coolant_network_sigma",
+    "name": "Coolant Network Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "coolant_network_tau",
+    "name": "Coolant Network Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "coolant_network_theta",
+    "name": "Coolant Network Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "cooling_system",
+    "name": "Cooling System",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "cooling_system_frigate",
+    "name": "Cooling System (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "corroded_tanks",
+    "name": "Corroded Tanks",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "corrupt_module",
+    "name": "Corrupt Module",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "crimson_freighter_trail",
+    "name": "Crimson Freighter Trail",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista",
+    "name": "Cyclotron Ballista",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_coolant_sigma",
+    "name": "Cyclotron Ballista Coolant Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_coolant_tau",
+    "name": "Cyclotron Ballista Coolant Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_coolant_theta",
+    "name": "Cyclotron Ballista Coolant Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_damage_sigma",
+    "name": "Cyclotron Ballista Damage Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_damage_tau",
+    "name": "Cyclotron Ballista Damage Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_damage_theta",
+    "name": "Cyclotron Ballista Damage Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_fire_rate_sigma",
+    "name": "Cyclotron Ballista Fire Rate Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_fire_rate_tau",
+    "name": "Cyclotron Ballista Fire Rate Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_fire_rate_theta",
+    "name": "Cyclotron Ballista Fire Rate Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "cyclotron_ballista_upgrade",
+    "name": "Cyclotron Ballista Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "daedalus_engine",
+    "name": "Daedalus Engine",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "daedalus_engine_upgrade",
+    "name": "Daedalus Engine Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "daedalus_engine"
+    ]
+  },
+  {
+    "id": "damage_radius",
+    "name": "Damage Radius",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "damage_radius_tau",
+    "name": "Damage Radius Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "damaged_electrode",
+    "name": "Damaged Electrode",
+    "platform": "drop_pod",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "drop_pod"
+    ]
+  },
+  {
+    "id": "damaged_gears",
+    "name": "Damaged Gears",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "damaged_wiring",
+    "name": "Damaged Wiring",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "dayzhenyov_kosh_v2_1",
+    "name": "Dayzhenyov-kosh v2.1",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "defence_systems_upgrade",
+    "name": "Defence Systems Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "defence_systems"
+    ]
+  },
+  {
+    "id": "defiant_recoil_ii",
+    "name": "Defiant Recoil II",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "deflection_enhancement_sigma",
+    "name": "Deflection Enhancement Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "health"
+    ]
+  },
+  {
+    "id": "deflection_enhancement_tau",
+    "name": "Deflection Enhancement Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "health"
+    ]
+  },
+  {
+    "id": "deflection_enhancement_theta",
+    "name": "Deflection Enhancement Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "health"
+    ]
+  },
+  {
+    "id": "deflector_shield",
+    "name": "Deflector Shield",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "shield"
+    ]
+  },
+  {
+    "id": "deflector_shield_atlas",
+    "name": "Deflector Shield (Atlas)",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "health"
+    ]
+  },
+  {
+    "id": "deflector_shield_upgrade",
+    "name": "Deflector Shield Upgrade",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "shield"
+    ]
+  },
+  {
+    "id": "dredging_laser",
+    "name": "Dredging Laser",
+    "platform": "aquatic",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "aquatic",
+      "nautilon"
+    ]
+  },
+  {
+    "id": "drift_suspension",
+    "name": "Drift Suspension",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "handling"
+    ]
+  },
+  {
+    "id": "dustadtte_mark_ii",
+    "name": "Dustadtte Mark II",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scrimshaw"
+    ]
+  },
+  {
+    "id": "dyson_pump",
+    "name": "Dyson Pump",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "economy_scanner",
+    "name": "Economy Scanner",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "scanner"
+    ]
+  },
+  {
+    "id": "efficient_thrusters",
+    "name": "Efficient Thrusters",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_thruster"
+    ]
+  },
+  {
+    "id": "efficient_water_jets",
+    "name": "Efficient Water Jets",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "movement"
+    ]
+  },
+  {
+    "id": "emergency_warp_unit",
+    "name": "Emergency Warp Unit",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "emeril_drive",
+    "name": "Emeril Drive",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "environment_control_unit",
+    "name": "Environment Control Unit",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "exceptional_intuition_vii",
+    "name": "Exceptional Intuition VII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "exo_skiff",
+    "name": "Exo-Skiff",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "exocraft_boosters",
+    "name": "Exocraft Boosters",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "exocraft_boosters_upgrade",
+    "name": "Exocraft Boosters Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "boosters_module"
+    ]
+  },
+  {
+    "id": "exocraft_boosters_upgrade_sigma",
+    "name": "Exocraft Boosters Upgrade Sigma",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "utilities"
+    ]
+  },
+  {
+    "id": "exocraft_boosters_upgrade_tau",
+    "name": "Exocraft Boosters Upgrade Tau",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "utilities"
+    ]
+  },
+  {
+    "id": "exocraft_mining_laser",
+    "name": "Exocraft Mining Laser",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "exocraft_mining_laser_upgrade",
+    "name": "Exocraft Mining Laser Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "mining_laser"
+    ]
+  },
+  {
+    "id": "exocraft_radar",
+    "name": "Exocraft Radar",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "communications"
+    ]
+  },
+  {
+    "id": "exocraft_summoning_unit",
+    "name": "Exocraft Summoning Unit",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "experiment_13j_v",
+    "name": "Experiment 13J/V",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_37c_97o",
+    "name": "Experiment 37C/97O",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_5_zv2",
+    "name": "Experiment 5-ZV2",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_6_5",
+    "name": "Experiment 6/5",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_b_3",
+    "name": "Experiment B/3",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_b_9",
+    "name": "Experiment B/9",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_j_a21",
+    "name": "Experiment J/A21",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_js9_7",
+    "name": "Experiment JS9-7",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_k_7",
+    "name": "Experiment K/7",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_ra1_kg8",
+    "name": "Experiment RA1 KG8",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_t32_j",
+    "name": "Experiment T32-J",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "experiment_y_f15",
+    "name": "Experiment Y-F15",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "exploded_panel",
+    "name": "Exploded Panel",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "fadilims_mark_xv",
+    "name": "Fadilims Mark XV",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "fading_plaarkto_ipio",
+    "name": "Fading Plaarkto-Ipio",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "fading_rucadrumm",
+    "name": "Fading Rucadrumm",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "faulty_hologram",
+    "name": "Faulty Hologram",
+    "platform": "drop_pod",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "drop_pod"
+    ]
+  },
+  {
+    "id": "fauna_analyzer_sigma",
+    "name": "Fauna Analyzer Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "fauna_analyzer_tau",
+    "name": "Fauna Analyzer Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "fauna_analyzer_theta",
+    "name": "Fauna Analyzer Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "fetirlitsre_mark_xix",
+    "name": "Fetirlitsre Mark XIX",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "final_riposte_i",
+    "name": "Final Riposte I",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "fishing_rig",
+    "name": "Fishing Rig",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "angling_equipment"
+    ]
+  },
+  {
+    "id": "fleeting_daanseon_uzan",
+    "name": "Fleeting Daanseon-Uzan",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "fleeting_enetinoser_dede",
+    "name": "Fleeting Enetinoser-Dede",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "fleeting_johrididja_ains",
+    "name": "Fleeting Johrididja-Ains",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "flight_assist_override",
+    "name": "Flight Assist Override",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "interplanetary"
+    ]
+  },
+  {
+    "id": "flora_analyzer_sigma",
+    "name": "Flora Analyzer Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "flora_analyzer_tau",
+    "name": "Flora Analyzer Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "flora_analyzer_theta",
+    "name": "Flora Analyzer Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "forbidden_exosuit_module",
+    "name": "Forbidden Exosuit Module",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "forbidden_multi_tool_module",
+    "name": "Forbidden Multi-Tool Module",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "fourier_de_limiter",
+    "name": "Fourier De-Limiter",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "fragment_supercharger",
+    "name": "Fragment Supercharger",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "frameshift_catapult",
+    "name": "Frameshift Catapult",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "freighter_hyperdrive",
+    "name": "Freighter Hyperdrive",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "freighter_warp_reactor_sigma",
+    "name": "Freighter Warp Reactor Sigma",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "freighter_warp_reactor_tau",
+    "name": "Freighter Warp Reactor Tau",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "freighter_warp_reactor_theta",
+    "name": "Freighter Warp Reactor Theta",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "fuel_inverter",
+    "name": "Fuel Inverter",
+    "platform": "general",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": []
+  },
+  {
+    "id": "fuel_pump",
+    "name": "Fuel Pump",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "furnace_tank",
+    "name": "Furnace Tank",
+    "platform": "general",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": []
+  },
+  {
+    "id": "fusion_engine",
+    "name": "Fusion Engine",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "core_systems"
+    ]
+  },
+  {
+    "id": "fusion_engine_upgrade",
+    "name": "Fusion Engine Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "fusion_engine"
+    ]
+  },
+  {
+    "id": "g38_jp6_elevated_loop",
+    "name": "G38-JP6 Elevated Loop",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "generator_coupling",
+    "name": "Generator Coupling",
+    "platform": "general",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": []
+  },
+  {
+    "id": "geology_cannon",
+    "name": "Geology Cannon",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "geology_cannon_upgrade",
+    "name": "Geology Cannon Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "gift_of_auhetena",
+    "name": "Gift of Auhetena",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "gift_of_jarjeluse_ebro",
+    "name": "Gift of Jarjeluse-Ebro",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "glyph_1_16",
+    "name": "Glyph 1 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_10_16",
+    "name": "Glyph 10 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_11_16",
+    "name": "Glyph 11 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_12_16",
+    "name": "Glyph 12 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_13_16",
+    "name": "Glyph 13 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_14_16",
+    "name": "Glyph 14 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_15_16",
+    "name": "Glyph 15 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_16_16",
+    "name": "Glyph 16 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_2_16",
+    "name": "Glyph 2 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_3_16",
+    "name": "Glyph 3 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_4_16",
+    "name": "Glyph 4 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_5_16",
+    "name": "Glyph 5 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_6_16",
+    "name": "Glyph 6 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_7_16",
+    "name": "Glyph 7 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_8_16",
+    "name": "Glyph 8 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "glyph_9_16",
+    "name": "Glyph 9 / 16",
+    "platform": "ancient_technology",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ancient_technology"
+    ]
+  },
+  {
+    "id": "grafted_eyes",
+    "name": "Grafted Eyes",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "gravity_of_enoharaz",
+    "name": "Gravity of Enoharaz",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "grenade_intensity_sigma",
+    "name": "Grenade Intensity Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "grenade_intensity_tau",
+    "name": "Grenade Intensity Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "grenade_intensity_theta",
+    "name": "Grenade Intensity Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "grenade_propulsion",
+    "name": "Grenade Propulsion",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "grenade"
+    ]
+  },
+  {
+    "id": "grenade_propulsion_tau",
+    "name": "Grenade Propulsion Tau",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "grenade"
+    ]
+  },
+  {
+    "id": "grip_boost_suspension",
+    "name": "Grip Boost Suspension",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "handling"
+    ]
+  },
+  {
+    "id": "hardframe_body",
+    "name": "Hardframe Body",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "hardframe_left_arm",
+    "name": "Hardframe Left Arm",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "hardframe_legs",
+    "name": "Hardframe Legs",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "hardframe_right_arm",
+    "name": "Hardframe Right Arm",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "harmony_of_gudhiekt_mydo",
+    "name": "Harmony of Gudhiekt-Mydo",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "haz_mat_gauntlet",
+    "name": "Haz-Mat Gauntlet",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "hazard_protection",
+    "name": "Hazard Protection",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "health_module_sigma",
+    "name": "Health Module Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "health_module_tau",
+    "name": "Health Module Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "health_module_theta",
+    "name": "Health Module Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "hetyembran_fabar_mark_vii",
+    "name": "Hetyembran-Fabar Mark VII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "hi_slide_suspension",
+    "name": "Hi-Slide Suspension",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "handling"
+    ]
+  },
+  {
+    "id": "hidden_nutverdis_upug",
+    "name": "Hidden Nutverdis-Upug",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "high_gravity_freighter_trail",
+    "name": "High-Gravity Freighter Trail",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter"
+    ]
+  },
+  {
+    "id": "high_power_sonar",
+    "name": "High-Power Sonar",
+    "platform": "aquatic",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "aquatic"
+    ]
+  },
+  {
+    "id": "homing_grenade",
+    "name": "Homing Grenade",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "plasma_launcher_companion_unit"
+    ]
+  },
+  {
+    "id": "homingbolt_adaptor",
+    "name": "Homingbolt Adaptor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "hull_fracture",
+    "name": "Hull Fracture",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "humboldt_drive",
+    "name": "Humboldt Drive",
+    "platform": "aquatic",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "aquatic"
+    ]
+  },
+  {
+    "id": "humboldt_drive_upgrade",
+    "name": "Humboldt Drive Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "humboldt_drive"
+    ]
+  },
+  {
+    "id": "hunter_of_netsukaido_cutyl",
+    "name": "Hunter of Netsukaido Cutyl",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "hydraulics_damage",
+    "name": "Hydraulics Damage",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
   },
   {
     "id": "hyperdrive",
     "name": "Hyperdrive",
     "platform": "starship",
     "slotType": "tech",
-    "baseValue": 160,
-    "adjacency": {
-      "pulse_engine": 12,
-      "hyperdrive": 25
-    },
-    "superchargeMultiplier": 1.35,
-    "tags": ["warp"]
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
   },
   {
-    "id": "launch_thrusters",
-    "name": "Launch Thrusters",
+    "id": "hyperdrive_atlas",
+    "name": "Hyperdrive (Atlas)",
     "platform": "starship",
     "slotType": "tech",
-    "baseValue": 90,
-    "adjacency": {
-      "pulse_engine": 8,
-      "shield_life_support": 5
-    },
-    "superchargeMultiplier": 1.25,
-    "tags": ["utility"]
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
   },
   {
-    "id": "shield_life_support",
-    "name": "Deflector Shield",
+    "id": "hyperdrive_upgrade",
+    "name": "Hyperdrive Upgrade",
     "platform": "starship",
     "slotType": "tech",
-    "baseValue": 140,
-    "adjacency": {
-      "shield_life_support": 18,
-      "launch_thrusters": 6
-    },
-    "superchargeMultiplier": 1.4,
-    "tags": ["defense"]
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "icarus_fuel_system",
+    "name": "Icarus Fuel System",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "illegal_hazard_protection_upgrade",
+    "name": "Illegal Hazard Protection Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "impact_damage_omega",
+    "name": "Impact Damage Omega",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "impact_damage_sigma",
+    "name": "Impact Damage Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "impact_damage_tau",
+    "name": "Impact Damage Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "impact_damage_theta",
+    "name": "Impact Damage Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "impact_igniter",
+    "name": "Impact Igniter",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "impulse_of_iogamagao_eutr",
+    "name": "Impulse of Iogamagao-Eutr",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "incinerator",
+    "name": "Incinerator",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "indium_drive",
+    "name": "Indium Drive",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator",
+    "name": "Infra-Knife Accelerator",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_coolant_sigma",
+    "name": "Infra-Knife Accelerator Coolant Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_coolant_tau",
+    "name": "Infra-Knife Accelerator Coolant Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_coolant_theta",
+    "name": "Infra-Knife Accelerator Coolant Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_damage_sigma",
+    "name": "Infra-Knife Accelerator Damage Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_damage_tau",
+    "name": "Infra-Knife Accelerator Damage Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_damage_theta",
+    "name": "Infra-Knife Accelerator Damage Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_fire_rate_sigma",
+    "name": "Infra-Knife Accelerator Fire Rate Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_fire_rate_tau",
+    "name": "Infra-Knife Accelerator Fire Rate Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_fire_rate_theta",
+    "name": "Infra-Knife Accelerator Fire Rate Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "infra_knife_accelerator_upgrade",
+    "name": "Infra-Knife Accelerator Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "input_terminal",
+    "name": "Input Terminal",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "instability_drive",
+    "name": "Instability Drive",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "interplanetary"
+    ]
+  },
+  {
+    "id": "interstellar_scanner",
+    "name": "Interstellar Scanner",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "scanner"
+    ]
+  },
+  {
+    "id": "inversion_of_ilkulovoma",
+    "name": "Inversion of Ilkulovoma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "inversion_of_prudiiwei_winse",
+    "name": "Inversion of Prudiiwei-Winse",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "ion_blast",
+    "name": "Ion Blast",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "ion_propulsion_v1",
+    "name": "Ion Propulsion V1",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "j_a_defiant_path",
+    "name": "J/A Defiant Path",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "jetpack",
+    "name": "Jetpack",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "jetpack_booster_sigma",
+    "name": "Jetpack Booster Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "jetpack_booster_tau",
+    "name": "Jetpack Booster Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "jetpack_booster_theta",
+    "name": "Jetpack Booster Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "kaviraiji_cair_mark_ix",
+    "name": "Kaviraiji-Cair Mark IX",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "l75_4_subdued_theory",
+    "name": "L75-4 Subdued Theory",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "lahariist_mark_xvii",
+    "name": "Lahariist Mark XVII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "land_disruptor",
+    "name": "Land Disruptor",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "grenade"
+    ]
+  },
+  {
+    "id": "large_rocket_tubes",
+    "name": "Large Rocket Tubes",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "launch_auto_charger",
+    "name": "Launch Auto-Charger",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_thruster"
+    ]
+  },
+  {
+    "id": "launch_thruster",
+    "name": "Launch Thruster",
+    "platform": "propulsion",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "propulsion",
+      "enhancement"
+    ]
+  },
+  {
+    "id": "launch_thruster_upgrade",
+    "name": "Launch Thruster Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_thruster"
+    ]
+  },
+  {
+    "id": "life_support",
+    "name": "Life Support",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "core_systems"
+    ]
+  },
+  {
+    "id": "life_support_module_sigma",
+    "name": "Life Support Module Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "life_support_module_tau",
+    "name": "Life Support Module Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "life_support_upgrade",
+    "name": "Life Support Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "liquidator_body",
+    "name": "Liquidator Body",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "liquidator_left_arm",
+    "name": "Liquidator Left Arm",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "liquidator_legs",
+    "name": "Liquidator Legs",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "liquidator_right_arm",
+    "name": "Liquidator Right Arm",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "load_balancer",
+    "name": "Load Balancer",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "locking_mechanism",
+    "name": "Locking Mechanism",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "loom_damage",
+    "name": "Loom Damage",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "lost_anglers_rig",
+    "name": "Lost Angler's Rig",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "angling_equipment"
+    ]
+  },
+  {
+    "id": "lucid_hunter_xix",
+    "name": "Lucid Hunter XIX",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "lucid_prayer_vi",
+    "name": "Lucid Prayer VI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "magnetic_lock",
+    "name": "Magnetic Lock",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "mark_of_the_denier",
+    "name": "Mark of the Denier",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "mark_xix",
+    "name": "Mark XIX",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "mass_accelerator",
+    "name": "Mass Accelerator",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "master_circuit",
+    "name": "Master Circuit",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "master_circuit_frigate",
+    "name": "Master Circuit (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "matter_beam",
+    "name": "Matter Beam",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "megawatt_heater",
+    "name": "Megawatt Heater",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "melted_fuel_cell",
+    "name": "Melted Fuel Cell",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "mercurial_angle_vi",
+    "name": "Mercurial Angle VI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "minelaser",
+    "name": "MineLaser",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "laser"
+    ]
+  },
+  {
+    "id": "mineral_processing_rig",
+    "name": "Mineral Processing Rig",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "colossus"
+    ]
+  },
+  {
+    "id": "mining_beam",
+    "name": "Mining Beam",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "mining_beam_atlas",
+    "name": "Mining Beam (Atlas)",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "mining_beam_upgrade",
+    "name": "Mining Beam Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "minotaur_ai_pilot",
+    "name": "Minotaur AI Pilot",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "minotaur_bore",
+    "name": "Minotaur Bore",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "minotaur_cannon",
+    "name": "Minotaur Cannon",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "minotaur_cannon_upgrade",
+    "name": "Minotaur Cannon Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "minotaur_cannon"
+    ]
+  },
+  {
+    "id": "minotaur_flamethrower_upgrade",
+    "name": "Minotaur Flamethrower Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "minotaur_flamethrower"
+    ]
+  },
+  {
+    "id": "minotaur_laser",
+    "name": "Minotaur Laser",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "minotaur_laser_upgrade",
+    "name": "Minotaur Laser Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "minotaur_laser"
+    ]
+  },
+  {
+    "id": "minotaur_radar_array",
+    "name": "Minotaur Radar Array",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "moskojin_xorc_mark_xviii",
+    "name": "Moskojin-Xorc Mark XVIII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "mounted_cannon",
+    "name": "Mounted Cannon",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "weapons"
+    ]
+  },
+  {
+    "id": "mounted_cannon_upgrade",
+    "name": "Mounted Cannon Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "mounted_cannon"
+    ]
+  },
+  {
+    "id": "mounted_cannon_upgrade_sigma",
+    "name": "Mounted Cannon Upgrade Sigma",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "weapon_upgrades"
+    ]
+  },
+  {
+    "id": "mounted_flamethrower",
+    "name": "Mounted Flamethrower",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft"
+    ]
+  },
+  {
+    "id": "movement_system_upgrade",
+    "name": "Movement System Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "movement_system"
+    ]
+  },
+  {
+    "id": "nautilon_cannon",
+    "name": "Nautilon Cannon",
+    "platform": "aquatic",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "aquatic"
+    ]
+  },
+  {
+    "id": "nautilon_cannon_upgrade",
+    "name": "Nautilon Cannon Upgrade",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "nautilon_cannon"
+    ]
+  },
+  {
+    "id": "network_interface",
+    "name": "Network Interface",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "neural_assembly",
+    "name": "Neural Assembly",
+    "platform": "propulsion",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "propulsion",
+      "enhancement"
+    ]
+  },
+  {
+    "id": "neural_shielding",
+    "name": "Neural Shielding",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "scan_deflector"
+    ]
+  },
+  {
+    "id": "neural_shielding_implant",
+    "name": "Neural Shielding Implant",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "scan_deflector"
+    ]
+  },
+  {
+    "id": "neural_stimulator",
+    "name": "Neural Stimulator",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "movement"
+    ]
+  },
+  {
+    "id": "neutron_cannon",
+    "name": "Neutron Cannon",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "neutron_cannon_upgrade",
+    "name": "Neutron Cannon Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "neutron_cannon"
+    ]
+  },
+  {
+    "id": "neutron_shielding",
+    "name": "Neutron Shielding",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "nm5_iq7_complete_angle",
+    "name": "NM5-IQ7 Complete Angle",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "nonlinear_optics",
+    "name": "Nonlinear Optics",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "nonlinear_optics_infra_knife_accelerator",
+    "name": "Nonlinear Optics (Infra-Knife Accelerator)",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "nutrient_ingestor",
+    "name": "Nutrient Ingestor",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "o_l_complete_inversion",
+    "name": "O/L Complete Inversion",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "obedient_loop_xvii",
+    "name": "Obedient Loop XVII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "obsolete_technology",
+    "name": "Obsolete Technology",
+    "platform": "exosuit_starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit_starship"
+    ]
+  },
+  {
+    "id": "odvinsko_iayi_v7_28",
+    "name": "Odvinsko-Iayi V7.28",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "oebardsub_lesc_mark_xiii",
+    "name": "Oebardsub Lesc Mark XIII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "ofitsial_uilo_v4_0",
+    "name": "Ofitsial uilo V4.0",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "ogliaobei_urge_mark_xiii",
+    "name": "Ogliaobei-Urge Mark XIII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "optical_drill",
+    "name": "Optical Drill",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "osmotic_generator",
+    "name": "Osmotic Generator",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "output_screen",
+    "name": "Output Screen",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "oxygen_recycler",
+    "name": "Oxygen Recycler",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "oxygen_rerouter",
+    "name": "Oxygen Rerouter",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "life_support"
+    ]
+  },
+  {
+    "id": "p_field_compressor",
+    "name": "P-Field Compressor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "paralysis_mortar",
+    "name": "Paralysis Mortar",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "path_of_devertage_noff",
+    "name": "Path of Devertage-Noff",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "path_of_deyneseg",
+    "name": "Path of Deyneseg",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "pearl_offering",
+    "name": "Pearl Offering",
+    "platform": "artifact",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "artifact"
+    ]
+  },
+  {
+    "id": "personal_forcefield",
+    "name": "Personal Forcefield",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "shield"
+    ]
+  },
+  {
+    "id": "personal_refiner",
+    "name": "Personal Refiner",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "personal_refiner_mk_2",
+    "name": "Personal Refiner Mk 2",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "phase_beam",
+    "name": "Phase Beam",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "phase_beam_atlas",
+    "name": "Phase Beam (Atlas)",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "laser"
+    ]
+  },
+  {
+    "id": "phase_beam_upgrade",
+    "name": "Phase Beam Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "phase_coolant_sigma",
+    "name": "Phase Coolant Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "phase_coolant_tau",
+    "name": "Phase Coolant Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "phase_coolant_theta",
+    "name": "Phase Coolant Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "photon_accelerator",
+    "name": "Photon Accelerator",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "photon_blast",
+    "name": "Photon Blast",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "photon_cannon",
+    "name": "Photon Cannon",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "photon_cannon_upgrade",
+    "name": "Photon Cannon Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "photonix_core",
+    "name": "Photonix Core",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "utilities"
+    ]
+  },
+  {
+    "id": "photovoltaic_panel",
+    "name": "Photovoltaic Panel",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "photovoltaic_panel_frigate",
+    "name": "Photovoltaic Panel (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "pilyusha_mark_vi",
+    "name": "Pilyusha Mark VI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "plasma_core_casing_v1",
+    "name": "Plasma Core Casing V1",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon"
+    ]
+  },
+  {
+    "id": "plasma_launcher",
+    "name": "Plasma Launcher",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "plasma_launcher_upgrade",
+    "name": "Plasma Launcher Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "plasma_resonator",
+    "name": "Plasma Resonator",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "plasmatic_warp_injector",
+    "name": "Plasmatic Warp Injector",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "polyphonic_core",
+    "name": "Polyphonic Core",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "positron_ejector",
+    "name": "Positron Ejector",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_atlas",
+    "name": "Positron Ejector (Atlas)",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_coolant_sigma",
+    "name": "Positron Ejector Coolant Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_coolant_tau",
+    "name": "Positron Ejector Coolant Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_coolant_theta",
+    "name": "Positron Ejector Coolant Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_damage_sigma",
+    "name": "Positron Ejector Damage Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_damage_tau",
+    "name": "Positron Ejector Damage Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_damage_theta",
+    "name": "Positron Ejector Damage Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_fire_rate_sigma",
+    "name": "Positron Ejector Fire Rate Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_fire_rate_tau",
+    "name": "Positron Ejector Fire Rate Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_fire_rate_theta",
+    "name": "Positron Ejector Fire Rate Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "positron_ejector_upgrade",
+    "name": "Positron Ejector Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "power_distributor",
+    "name": "Power Distributor",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "power_distributor_frigate",
+    "name": "Power Distributor (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "prayer_of_kaladeela_dedar",
+    "name": "Prayer of Kaladeela Dedar",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "precision_minotaur_laser",
+    "name": "Precision Minotaur Laser",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "pressure_chamber",
+    "name": "Pressure Chamber",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "pressure_chamber_frigate",
+    "name": "Pressure Chamber (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "pressure_membrane",
+    "name": "Pressure Membrane",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "protection_mesh",
+    "name": "Protection Mesh",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "pulse_engine",
+    "name": "Pulse Engine",
+    "platform": "propulsion",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "propulsion",
+      "interplanetary"
+    ]
+  },
+  {
+    "id": "pulse_engine_upgrade",
+    "name": "Pulse Engine Upgrade",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "pulse_engine"
+    ]
+  },
+  {
+    "id": "pulse_jet_sigma",
+    "name": "Pulse Jet Sigma",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "utilities"
+    ]
+  },
+  {
+    "id": "pulse_jet_tau",
+    "name": "Pulse Jet Tau",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship",
+      "utilities"
+    ]
+  },
+  {
+    "id": "pulse_spitter",
+    "name": "Pulse Spitter",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "pulse_spitter_atlas",
+    "name": "Pulse Spitter (Atlas)",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "pulse_spitter_accuracy_sigma",
+    "name": "Pulse Spitter Accuracy Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_accuracy_tau",
+    "name": "Pulse Spitter Accuracy Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_accuracy_theta",
+    "name": "Pulse Spitter Accuracy Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_damage_sigma",
+    "name": "Pulse Spitter Damage Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_damage_tau",
+    "name": "Pulse Spitter Damage Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_damage_theta",
+    "name": "Pulse Spitter Damage Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_reload_sigma",
+    "name": "Pulse Spitter Reload Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_reload_tau",
+    "name": "Pulse Spitter Reload Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_reload_theta",
+    "name": "Pulse Spitter Reload Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "pulse_spitter"
+    ]
+  },
+  {
+    "id": "pulse_spitter_ricochet_module",
+    "name": "Pulse Spitter Ricochet Module",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "pulse_spitter_upgrade",
+    "name": "Pulse Spitter Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "pulsing_heart",
+    "name": "Pulsing Heart",
+    "platform": "propulsion",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "propulsion",
+      "interplanetary"
+    ]
+  },
+  {
+    "id": "q_resonator",
+    "name": "Q-Resonator",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "qv6_r_lucid_clarity",
+    "name": "QV6-R Lucid Clarity",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "qw17_elevated_trace",
+    "name": "QW17 Elevated Trace",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "radar_amplifier",
+    "name": "Radar Amplifier",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "communications"
+    ]
+  },
+  {
+    "id": "radar_power_resonator",
+    "name": "Radar Power Resonator",
+    "platform": "exocraft",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exocraft",
+      "communications"
+    ]
+  },
+  {
+    "id": "radiation_deflector",
+    "name": "Radiation Deflector",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "radiation_deflector_next",
+    "name": "Radiation Deflector (NEXT)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "radiation_deflector_sigma",
+    "name": "Radiation Deflector Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "radiation_deflector_tau",
+    "name": "Radiation Deflector Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "radiation_deflector_theta",
+    "name": "Radiation Deflector Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "radiation_leak",
+    "name": "Radiation Leak",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "radiation_protection_module",
+    "name": "Radiation Protection Module",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "radiation_protection_upgrade",
+    "name": "Radiation Protection Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "radiation_protection"
+    ]
+  },
+  {
+    "id": "railshot_adaptor",
+    "name": "Railshot Adaptor",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "rangeboost_sigma",
+    "name": "RangeBoost Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "rangeboost_tau",
+    "name": "RangeBoost Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "rapidfire_sigma",
+    "name": "Rapidfire Sigma",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "rapidfire_tau",
+    "name": "Rapidfire Tau",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "rapidfire_theta",
+    "name": "Rapidfire Theta",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "reactor_core",
+    "name": "Reactor Core",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "subcomponent"
+    ]
+  },
+  {
+    "id": "reality_de_threader",
+    "name": "Reality De-Threader",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "rebound_grenades",
+    "name": "Rebound Grenades",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "rebound_grenades_tau",
+    "name": "Rebound Grenades Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "grenade"
+    ]
+  },
+  {
+    "id": "rebuilt_exosuit_module",
+    "name": "Rebuilt Exosuit Module",
+    "platform": "consumable",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "consumable",
+      "salvaged_upgrade_components"
+    ]
+  },
+  {
+    "id": "recoil_stabiliser_sigma",
+    "name": "Recoil Stabiliser Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "recoil_stabiliser_tau",
+    "name": "Recoil Stabiliser Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "recoil_stabiliser_theta",
+    "name": "Recoil Stabiliser Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "reflex_aspect_xi",
+    "name": "Reflex Aspect XI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "reflex_elutisti",
+    "name": "Reflex Elutisti",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "reflex_thagrenbo_xopre",
+    "name": "Reflex Thagrenbo-Xopre",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "reload_accelerant_sigma",
+    "name": "Reload Accelerant Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "reload_accelerant_tau",
+    "name": "Reload Accelerant Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "reload_accelerant_theta",
+    "name": "Reload Accelerant Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "remembrance",
+    "name": "Remembrance",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "resonance_amplifier",
+    "name": "Resonance Amplifier",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "resonance_matrix",
+    "name": "Resonance Matrix",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "retort_of_ryforbag",
+    "name": "Retort of Ryforbag",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "return_of_otusiret_fuma",
+    "name": "Return of Otusiret-Fuma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "ricochet_sigma",
+    "name": "Ricochet Sigma",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "ricochet_tau",
+    "name": "Ricochet Tau",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "ricochet_theta",
+    "name": "Ricochet Theta",
+    "platform": "weapon",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "weapon",
+      "projectile"
+    ]
+  },
+  {
+    "id": "riposte_of_daukaint",
+    "name": "Riposte of Daukaint",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "riposte_of_issaphan",
+    "name": "Riposte of Issaphan",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "rocket_boots",
+    "name": "Rocket Boots",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "movement"
+    ]
+  },
+  {
+    "id": "rocket_launcher",
+    "name": "Rocket Launcher",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "rusted_circuits",
+    "name": "Rusted Circuits",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "rusted_power_core",
+    "name": "Rusted Power Core",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "safety_panel",
+    "name": "Safety Panel",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "saline_carapace",
+    "name": "Saline Carapace",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "launch_thruster"
+    ]
+  },
+  {
+    "id": "salvaged_upgrade_components",
+    "name": "Salvaged Upgrade Components",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "scan_harmoniser",
+    "name": "Scan Harmoniser",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "scanner",
+    "name": "Scanner",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "scatter_blaster",
+    "name": "Scatter Blaster",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "scatter_blaster_accuracy_sigma",
+    "name": "Scatter Blaster Accuracy Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_accuracy_tau",
+    "name": "Scatter Blaster Accuracy Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_accuracy_theta",
+    "name": "Scatter Blaster Accuracy Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_capacity_sigma",
+    "name": "Scatter Blaster Capacity Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_capacity_tau",
+    "name": "Scatter Blaster Capacity Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_capacity_theta",
+    "name": "Scatter Blaster Capacity Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_damage_sigma",
+    "name": "Scatter Blaster Damage Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_damage_tau",
+    "name": "Scatter Blaster Damage Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_damage_theta",
+    "name": "Scatter Blaster Damage Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_reload_sigma",
+    "name": "Scatter Blaster Reload Sigma",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_reload_tau",
+    "name": "Scatter Blaster Reload Tau",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_reload_theta",
+    "name": "Scatter Blaster Reload Theta",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scatter_blaster"
+    ]
+  },
+  {
+    "id": "scatter_blaster_upgrade",
+    "name": "Scatter Blaster Upgrade",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "scorched_plating",
+    "name": "Scorched Plating",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "scream_suppressor",
+    "name": "Scream Suppressor",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "shield"
+    ]
+  },
+  {
+    "id": "security_alarm",
+    "name": "Security Alarm",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "self_greasing_servos",
+    "name": "Self-Greasing Servos",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle",
+      "minotaur"
+    ]
+  },
+  {
+    "id": "sentinel_exosuit_fragment",
+    "name": "Sentinel Exosuit Fragment",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "consumable"
+    ]
+  },
+  {
+    "id": "sentinel_weapons_shard",
+    "name": "Sentinel Weapons Shard",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "consumable"
+    ]
+  },
+  {
+    "id": "servo_arm",
+    "name": "Servo Arm",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "servo_arm_frigate",
+    "name": "Servo Arm (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "shadow_of_eharasaki",
+    "name": "Shadow of Eharasaki",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "shattered_bulwark",
+    "name": "Shattered Bulwark",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "shattered_power_core",
+    "name": "Shattered Power Core",
+    "platform": "drop_pod",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "drop_pod"
+    ]
+  },
+  {
+    "id": "shell_greaser",
+    "name": "Shell Greaser",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "shield_kinetics",
+    "name": "Shield Kinetics",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "shield_lattice",
+    "name": "Shield Lattice",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "shieldboost_sigma",
+    "name": "ShieldBoost Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "shieldboost_tau",
+    "name": "ShieldBoost Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "shieldboost_theta",
+    "name": "ShieldBoost Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "shieldboost_v1",
+    "name": "ShieldBoost V1",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "short_circuit",
+    "name": "Short Circuit",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool"
+    ]
+  },
+  {
+    "id": "shortburst_adaptor",
+    "name": "Shortburst Adaptor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "simple_translator",
+    "name": "Simple Translator",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "singular_angle_xvii",
+    "name": "Singular Angle XVII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "singularity_cortex",
+    "name": "Singularity Cortex",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "singularity_engine",
+    "name": "Singularity Engine",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "solar_ray",
+    "name": "Solar Ray",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "solenoid",
+    "name": "Solenoid",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "solenoid_frigate",
+    "name": "Solenoid (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "spawning_sac",
+    "name": "Spawning Sac",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "inventory"
+    ]
+  },
+  {
+    "id": "spewing_vents",
+    "name": "Spewing Vents",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "weapons"
+    ]
+  },
+  {
+    "id": "spring_casing",
+    "name": "Spring Casing",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "spurushko_mark_iv",
+    "name": "Spurushko Mark IV",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "stable_iguenowah_ropes",
+    "name": "Stable Iguenowah-Ropes",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "stable_retort_xii",
+    "name": "Stable Retort XII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "stamina_enhancement_sigma",
+    "name": "Stamina Enhancement Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "stamina"
+    ]
+  },
+  {
+    "id": "stamina_enhancement_tau",
+    "name": "Stamina Enhancement Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "stamina"
+    ]
+  },
+  {
+    "id": "stamina_enhancement_theta",
+    "name": "Stamina Enhancement Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "stamina"
+    ]
+  },
+  {
+    "id": "star_seed",
+    "name": "Star Seed",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "health"
+    ]
+  },
+  {
+    "id": "steady_udyonkin_enti",
+    "name": "Steady Udyonkin-Enti",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "strange_gift_iv",
+    "name": "Strange Gift IV",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "strange_insight_viii",
+    "name": "Strange Insight VIII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "sub_light_amplifier",
+    "name": "Sub-Light Amplifier",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "interplanetary"
+    ]
+  },
+  {
+    "id": "subdued_concept_ix",
+    "name": "Subdued Concept IX",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "sublime_gleam_iii",
+    "name": "Sublime Gleam III",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "sublime_riposte_vi",
+    "name": "Sublime Riposte VI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "suchinohe_mark_x",
+    "name": "Suchinohe Mark X",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "sukaiwak_exceptional",
+    "name": "Sukaiwak Exceptional",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "rifle"
+    ]
+  },
+  {
+    "id": "superconductive_lock",
+    "name": "Superconductive Lock",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "superior_translator",
+    "name": "Superior Translator",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "survey_device",
+    "name": "Survey Device",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "tamper_prevention_device",
+    "name": "Tamper Prevention Device",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "teleport_receiver",
+    "name": "Teleport Receiver",
+    "platform": "ship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "ship"
+    ]
+  },
+  {
+    "id": "temporal_warp_computer",
+    "name": "Temporal Warp Computer",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "terrain_manipulator",
+    "name": "Terrain Manipulator",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "tool"
+    ]
+  },
+  {
+    "id": "tethys_beam",
+    "name": "Tethys Beam",
+    "platform": "aquatic",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "aquatic"
+    ]
+  },
+  {
+    "id": "tetmalont_mark_vi",
+    "name": "Tetmalont Mark VI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_acmiinar_b600",
+    "name": "The Acmiinar B600",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_auristinc_taed_k200",
+    "name": "The Auristinc-Taed K200",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_ayborodu_v0_28",
+    "name": "The Ayborodu V0.28",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_bawilotag_v5_30",
+    "name": "The Bawilotag v5.30",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_bujunman_x400",
+    "name": "The Bujunman X400",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "compact"
+    ]
+  },
+  {
+    "id": "the_giumelbu_baxa_v4_10",
+    "name": "The Giumelbu Baxa v4.10",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_guchihama_v8_17",
+    "name": "The Guchihama v8.17",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_hefeichac_duan_u200",
+    "name": "The Hefeichac Duan U200",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_hughnava_b300",
+    "name": "The Hughnava B300",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_ijonanko_uiet_u100",
+    "name": "The Ijonanko-Uiet U100",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_isrankan_v6_11",
+    "name": "The Isrankan v6.11",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_issinggas_coyli_j600",
+    "name": "The Issinggas Coyli J600",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_mepushpoo_v5_4",
+    "name": "The Mepushpoo v5.4",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_natlinmi_inzu_y200",
+    "name": "The Natlinmi Inzu Y200",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_ouwerkpa_n300",
+    "name": "The Ouwerkpa N300",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_ripugand_t600",
+    "name": "The Ripugand T600",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_rulsefren_terq_d600",
+    "name": "The Rulsefren-Terq D600",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_runinsko_v1_12",
+    "name": "The Runinsko v1.12",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_selmikka_tosu_v6_28",
+    "name": "The Selmikka-Tosu v6.28",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_t400",
+    "name": "The T400",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_teskaurvoy_b700",
+    "name": "The Teskaurvoy B700",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_totzerid_t600",
+    "name": "The Totzerid T600",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "the_utyannwin_v6_7",
+    "name": "The Utyannwin v6.7",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "theory_of_ivkativa",
+    "name": "Theory of Ivkativa",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "theory_of_yoncoraba_aodi",
+    "name": "Theory of Yoncoraba Aodi",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "thermal_buffer",
+    "name": "Thermal Buffer",
+    "platform": "vehicle",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "vehicle"
+    ]
+  },
+  {
+    "id": "thermal_protection_module_cold",
+    "name": "Thermal Protection Module (Cold)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "thermal_protection_module_heat",
+    "name": "Thermal Protection Module (Heat)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "thermal_protection_upgrade_cold",
+    "name": "Thermal Protection Upgrade (Cold)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "thermal_protection"
+    ]
+  },
+  {
+    "id": "thermal_protection_upgrade_heat",
+    "name": "Thermal Protection Upgrade (Heat)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "thermal_protection"
+    ]
+  },
+  {
+    "id": "thermic_layer",
+    "name": "Thermic Layer",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "thermic_layer_next",
+    "name": "Thermic Layer (NEXT)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "thermic_layer_sigma",
+    "name": "Thermic Layer Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "thermic_layer_tau",
+    "name": "Thermic Layer Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "thermic_layer_theta",
+    "name": "Thermic Layer Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "thermoregulator",
+    "name": "Thermoregulator",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "thermoregulator_frigate",
+    "name": "Thermoregulator (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "tiny_motor",
+    "name": "Tiny Motor",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "tiny_motor_frigate",
+    "name": "Tiny Motor (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "toxic_protection_module",
+    "name": "Toxic Protection Module",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "toxic_protection_upgrade",
+    "name": "Toxic Protection Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "toxin_suppressor",
+    "name": "Toxin Suppressor",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "toxin_suppressor_next",
+    "name": "Toxin Suppressor (NEXT)",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "toxin_suppressor_sigma",
+    "name": "Toxin Suppressor Sigma",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "toxin_suppressor_tau",
+    "name": "Toxin Suppressor Tau",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "toxin_suppressor_theta",
+    "name": "Toxin Suppressor Theta",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "utilities"
+    ]
+  },
+  {
+    "id": "trade_rocket",
+    "name": "Trade Rocket",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit"
+    ]
+  },
+  {
+    "id": "transmission_box",
+    "name": "Transmission Box",
+    "platform": "point_of_interest",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "point_of_interest"
+    ]
+  },
+  {
+    "id": "transmission_box_frigate",
+    "name": "Transmission Box (Frigate)",
+    "platform": "frigate",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "frigate"
+    ]
+  },
+  {
+    "id": "trident_key_damaged_component",
+    "name": "Trident Key (Damaged Component)",
+    "platform": "artifact",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "artifact"
+    ]
+  },
+  {
+    "id": "ubeijiao_mark_v",
+    "name": "Ubeijiao Mark V",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "uitaakis_mark_ix",
+    "name": "Uitaakis Mark IX",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "ummerukam_mark_xviii",
+    "name": "Ummerukam Mark XVIII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "underwater_oxygen_upgrade",
+    "name": "Underwater Oxygen Upgrade",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "aeration_membrane"
+    ]
+  },
+  {
+    "id": "underwater_protection_module",
+    "name": "Underwater Protection Module",
+    "platform": "exosuit",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "exosuit",
+      "hazard"
+    ]
+  },
+  {
+    "id": "unusual_ovetskaye_vexi",
+    "name": "Unusual Ovetskaye-Vexi",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "urbashyo_laeu_mark_xi",
+    "name": "Urbashyo-Laeu Mark XI",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "urihonma_mark_ii",
+    "name": "Urihonma Mark II",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "v_13q_vivid_theory",
+    "name": "V/13Q Vivid Theory",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "vesper_sail",
+    "name": "Vesper Sail",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "vivid_lusonhistr",
+    "name": "Vivid Lusonhistr",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "voltaic_amplifier",
+    "name": "Voltaic Amplifier",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "w_q_obscured_angle",
+    "name": "W-Q Obscured Angle",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "warp_core_resonator",
+    "name": "Warp Core Resonator",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "warp_reactor_sigma",
+    "name": "Warp Reactor Sigma",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "warp_reactor_tau",
+    "name": "Warp Reactor Tau",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "warp_reactor_theta",
+    "name": "Warp Reactor Theta",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "warp_shielding_sigma",
+    "name": "Warp Shielding Sigma",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "warp_shielding_tau",
+    "name": "Warp Shielding Tau",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "warp_shielding_theta",
+    "name": "Warp Shielding Theta",
+    "platform": "freighter",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "freighter",
+      "hyperdrive"
+    ]
+  },
+  {
+    "id": "waveform_engine",
+    "name": "Waveform Engine",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship"
+    ]
+  },
+  {
+    "id": "waveform_oscillator",
+    "name": "Waveform Oscillator",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapons"
+    ]
+  },
+  {
+    "id": "waveform_recycler",
+    "name": "Waveform Recycler",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "scanner"
+    ]
+  },
+  {
+    "id": "widebeam_adaptor",
+    "name": "Widebeam Adaptor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "widebeam_adaptor_v1",
+    "name": "Widebeam Adaptor V1",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "laser"
+    ]
+  },
+  {
+    "id": "wideshot_adaptor",
+    "name": "Wideshot Adaptor",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "projectile"
+    ]
+  },
+  {
+    "id": "wormhole_brain",
+    "name": "Wormhole Brain",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "scanner"
+    ]
+  },
+  {
+    "id": "wormhole_brain_implant",
+    "name": "Wormhole Brain Implant",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "starship",
+      "scanner"
+    ]
+  },
+  {
+    "id": "yazzioss_mark_xvii",
+    "name": "Yazzioss Mark XVII",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
+  },
+  {
+    "id": "zihurikha_mark_iv",
+    "name": "Zihurikha Mark IV",
+    "platform": "multi_tool",
+    "slotType": "tech",
+    "baseValue": 1,
+    "adjacency": {},
+    "superchargeMultiplier": 1,
+    "tags": [
+      "multi_tool",
+      "weapon"
+    ]
   }
 ]
