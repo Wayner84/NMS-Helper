@@ -11,6 +11,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "validate:data": "node --loader ts-node/esm scripts/validate-data.ts",
+    "sync:data": "node --loader ts-node/esm scripts/sync-cargo-data.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
