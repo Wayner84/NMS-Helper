@@ -1,31 +1,1535 @@
 [
   {
-    "id": "carbon_nanotubes_recipe",
-    "name": "Carbon Nanotubes",
-    "output": {"item": "carbon_nanotubes", "qty": 1},
+    "id": "acid_recipe",
+    "name": "Acid",
+    "output": {
+      "item": "acid",
+      "qty": 1
+    },
     "components": [
-      {"item": "carbon", "qty": 50}
+      {
+        "item": "mordite",
+        "qty": 25
+      },
+      {
+        "item": "fungal_mould",
+        "qty": 600
+      }
     ],
-    "value": 550
+    "value": 188000
   },
   {
-    "id": "microprocessor_recipe",
-    "name": "Microprocessor",
-    "output": {"item": "microprocessor", "qty": 1},
+    "id": "albumen_pearl_orb_recipe",
+    "name": "Albumen Pearl Orb",
+    "output": {
+      "item": "albumen_pearl_orb",
+      "qty": 1
+    },
     "components": [
-      {"item": "chromatic_metal", "qty": 40},
-      {"item": "carbon_nanotubes", "qty": 1, "viaRecipe": "carbon_nanotubes_recipe"}
+      {
+        "item": "indium",
+        "qty": 60
+      },
+      {
+        "item": "paraffinium",
+        "qty": 20
+      }
     ],
-    "value": 2000
+    "value": 3
+  },
+  {
+    "id": "amino_chamber_recipe",
+    "name": "Amino Chamber",
+    "output": {
+      "item": "amino_chamber",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "condensed_carbon",
+        "qty": 25
+      },
+      {
+        "item": "metal_plating",
+        "qty": 1,
+        "viaRecipe": "metal_plating_recipe"
+      },
+      {
+        "item": "chlorine",
+        "qty": 20
+      }
+    ],
+    "value": 12300
+  },
+  {
+    "id": "antimatter_recipe",
+    "name": "Antimatter",
+    "output": {
+      "item": "antimatter",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "condensed_carbon",
+        "qty": 20
+      },
+      {
+        "item": "chromatic_metal",
+        "qty": 25
+      }
+    ],
+    "value": 5233
+  },
+  {
+    "id": "antimatter_housing_recipe",
+    "name": "Antimatter Housing",
+    "output": {
+      "item": "antimatter_housing",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "oxygen",
+        "qty": 30
+      },
+      {
+        "item": "ferrite_dust",
+        "qty": 50
+      }
+    ],
+    "value": 6500
+  },
+  {
+    "id": "aronium_recipe",
+    "name": "Aronium",
+    "output": {
+      "item": "aronium",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ionised_cobalt",
+        "qty": 50
+      },
+      {
+        "item": "paraffinium",
+        "qty": 50
+      }
+    ],
+    "value": 25000
+  },
+  {
+    "id": "carbon_nanotubes_recipe",
+    "name": "Carbon Nanotubes",
+    "output": {
+      "item": "carbon_nanotubes",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "carbon",
+        "qty": 50
+      }
+    ],
+    "value": 500
   },
   {
     "id": "circuit_board_recipe",
     "name": "Circuit Board",
-    "output": {"item": "circuit_board", "qty": 1},
+    "output": {
+      "item": "circuit_board",
+      "qty": 1
+    },
     "components": [
-      {"item": "microprocessor", "qty": 2, "viaRecipe": "microprocessor_recipe"},
-      {"item": "chromatic_metal", "qty": 120}
+      {
+        "item": "heat_capacitor",
+        "qty": 1,
+        "viaRecipe": "heat_capacitor_recipe"
+      },
+      {
+        "item": "poly_fibre",
+        "qty": 1,
+        "viaRecipe": "poly_fibre_recipe"
+      }
     ],
-    "value": 9160
+    "value": 916250
+  },
+  {
+    "id": "consciousness_bridge_recipe",
+    "name": "Consciousness Bridge",
+    "output": {
+      "item": "consciousness_bridge",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "hexite",
+        "qty": 250
+      },
+      {
+        "item": "korvax_casing",
+        "qty": 1
+      },
+      {
+        "item": "pugneum",
+        "qty": 80
+      }
+    ],
+    "value": 1616
+  },
+  {
+    "id": "cryo_pump_recipe",
+    "name": "Cryo-Pump",
+    "output": {
+      "item": "cryo_pump",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "thermic_condensate",
+        "qty": 1,
+        "viaRecipe": "thermic_condensate_recipe"
+      },
+      {
+        "item": "hot_ice",
+        "qty": 1,
+        "viaRecipe": "hot_ice_recipe"
+      }
+    ],
+    "value": 1500000
+  },
+  {
+    "id": "cryogenic_chamber_recipe",
+    "name": "Cryogenic Chamber",
+    "output": {
+      "item": "cryogenic_chamber",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "living_glass",
+        "qty": 1,
+        "viaRecipe": "living_glass_recipe"
+      },
+      {
+        "item": "cryo_pump",
+        "qty": 1,
+        "viaRecipe": "cryo_pump_recipe"
+      }
+    ],
+    "value": 3800000
+  },
+  {
+    "id": "deep_space_lure_recipe",
+    "name": "Deep-Space Lure",
+    "output": {
+      "item": "deep_space_lure",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "chromatic_metal",
+        "qty": 40
+      },
+      {
+        "item": "silver",
+        "qty": 40
+      },
+      {
+        "item": "gold",
+        "qty": 40
+      }
+    ],
+    "value": 3280
+  },
+  {
+    "id": "di_hydrogen_jelly_recipe",
+    "name": "Di-hydrogen Jelly",
+    "output": {
+      "item": "di_hydrogen_jelly",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "di_hydrogen",
+        "qty": 40
+      }
+    ],
+    "value": 200
+  },
+  {
+    "id": "dirty_bronze_recipe",
+    "name": "Dirty Bronze",
+    "output": {
+      "item": "dirty_bronze",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "pure_ferrite",
+        "qty": 100
+      },
+      {
+        "item": "pyrite",
+        "qty": 50
+      }
+    ],
+    "value": 25000
+  },
+  {
+    "id": "echinocactus_recipe",
+    "name": "Echinocactus",
+    "output": {
+      "item": "echinocactus",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "pyrite",
+        "qty": 25
+      },
+      {
+        "item": "cactus_flesh",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "enriched_carbon_recipe",
+    "name": "Enriched Carbon",
+    "output": {
+      "item": "enriched_carbon",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "condensed_carbon",
+        "qty": 50
+      },
+      {
+        "item": "radon",
+        "qty": 250
+      }
+    ],
+    "value": 50000
+  },
+  {
+    "id": "explosive_drones_recipe",
+    "name": "Explosive Drones",
+    "output": {
+      "item": "explosive_drones",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "walker_brain",
+        "qty": 1
+      },
+      {
+        "item": "gold",
+        "qty": 50
+      }
+    ],
+    "value": 75000
+  },
+  {
+    "id": "frigate_fuel_100_tonnes_recipe",
+    "name": "Frigate Fuel (100 Tonnes)",
+    "output": {
+      "item": "frigate_fuel_100_tonnes",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "di_hydrogen",
+        "qty": 100
+      },
+      {
+        "item": "tritium",
+        "qty": 100
+      }
+    ],
+    "value": 40000
+  },
+  {
+    "id": "frigate_fuel_200_tonnes_recipe",
+    "name": "Frigate Fuel (200 Tonnes)",
+    "output": {
+      "item": "frigate_fuel_200_tonnes",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "di_hydrogen",
+        "qty": 200
+      },
+      {
+        "item": "tritium",
+        "qty": 200
+      }
+    ],
+    "value": 80000
+  },
+  {
+    "id": "frigate_fuel_50_tonnes_recipe",
+    "name": "Frigate Fuel (50 Tonnes)",
+    "output": {
+      "item": "frigate_fuel_50_tonnes",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "di_hydrogen",
+        "qty": 50
+      },
+      {
+        "item": "tritium",
+        "qty": 50
+      }
+    ],
+    "value": 20000
+  },
+  {
+    "id": "frostwort_recipe",
+    "name": "Frostwort",
+    "output": {
+      "item": "frostwort",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "dioxite",
+        "qty": 25
+      },
+      {
+        "item": "frost_crystal",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "fuel_oxidiser_recipe",
+    "name": "Fuel Oxidiser",
+    "output": {
+      "item": "fuel_oxidiser",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "quad_servo",
+        "qty": 2
+      },
+      {
+        "item": "gold",
+        "qty": 50
+      }
+    ],
+    "value": 75000
+  },
+  {
+    "id": "fungal_cluster_recipe",
+    "name": "Fungal Cluster",
+    "output": {
+      "item": "fungal_cluster",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ammonia",
+        "qty": 25
+      },
+      {
+        "item": "fungal_mould",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "fusion_accelerant_recipe",
+    "name": "Fusion Accelerant",
+    "output": {
+      "item": "fusion_accelerant",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "nitrogen_salt",
+        "qty": 1,
+        "viaRecipe": "nitrogen_salt_recipe"
+      },
+      {
+        "item": "organic_catalyst",
+        "qty": 1,
+        "viaRecipe": "organic_catalyst_recipe"
+      }
+    ],
+    "value": 1500000
+  },
+  {
+    "id": "fusion_ignitor_recipe",
+    "name": "Fusion Ignitor",
+    "output": {
+      "item": "fusion_ignitor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "portable_reactor",
+        "qty": 1,
+        "viaRecipe": "portable_reactor_recipe"
+      },
+      {
+        "item": "quantum_processor",
+        "qty": 1,
+        "viaRecipe": "quantum_processor_recipe"
+      },
+      {
+        "item": "geodesite",
+        "qty": 1,
+        "viaRecipe": "geodesite_recipe"
+      }
+    ],
+    "value": 15600000
+  },
+  {
+    "id": "gamma_weed_recipe",
+    "name": "Gamma Weed",
+    "output": {
+      "item": "gamma_weed",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "uranium",
+        "qty": 25
+      },
+      {
+        "item": "gamma_root",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "geodesite_recipe",
+    "name": "Geodesite",
+    "output": {
+      "item": "geodesite",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "dirty_bronze",
+        "qty": 1,
+        "viaRecipe": "dirty_bronze_recipe"
+      },
+      {
+        "item": "herox",
+        "qty": 1,
+        "viaRecipe": "herox_recipe"
+      },
+      {
+        "item": "lemmium",
+        "qty": 1,
+        "viaRecipe": "lemmium_recipe"
+      }
+    ],
+    "value": 150000
+  },
+  {
+    "id": "glass_recipe",
+    "name": "Glass",
+    "output": {
+      "item": "glass",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "frost_crystal",
+        "qty": 40
+      }
+    ],
+    "value": 200
+  },
+  {
+    "id": "grantine_recipe",
+    "name": "Grantine",
+    "output": {
+      "item": "grantine",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ionised_cobalt",
+        "qty": 50
+      },
+      {
+        "item": "dioxite",
+        "qty": 50
+      }
+    ],
+    "value": 25000
+  },
+  {
+    "id": "gravitino_host_recipe",
+    "name": "Gravitino Host",
+    "output": {
+      "item": "gravitino_host",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "magnetised_ferrite",
+        "qty": 25
+      },
+      {
+        "item": "chromatic_metal",
+        "qty": 25
+      },
+      {
+        "item": "silver",
+        "qty": 120
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "gutrot_flower_recipe",
+    "name": "Gutrot Flower",
+    "output": {
+      "item": "gutrot_flower",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "faecium",
+        "qty": 40
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "heat_capacitor_recipe",
+    "name": "Heat Capacitor",
+    "output": {
+      "item": "heat_capacitor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "frost_crystal",
+        "qty": 100
+      },
+      {
+        "item": "solanium",
+        "qty": 200
+      }
+    ],
+    "value": 180000
+  },
+  {
+    "id": "hermetic_seal_recipe",
+    "name": "Hermetic Seal",
+    "output": {
+      "item": "hermetic_seal",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "condensed_carbon",
+        "qty": 30
+      }
+    ],
+    "value": 800
+  },
+  {
+    "id": "herox_recipe",
+    "name": "Herox",
+    "output": {
+      "item": "herox",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ionised_cobalt",
+        "qty": 50
+      },
+      {
+        "item": "ammonia",
+        "qty": 50
+      }
+    ],
+    "value": 25000
+  },
+  {
+    "id": "holographic_analyser_recipe",
+    "name": "Holographic Analyser",
+    "output": {
+      "item": "holographic_analyser",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "gold",
+        "qty": 50
+      },
+      {
+        "item": "quantum_computer",
+        "qty": 1,
+        "viaRecipe": "quantum_computer_recipe"
+      }
+    ],
+    "value": 75000
+  },
+  {
+    "id": "hot_ice_recipe",
+    "name": "Hot Ice",
+    "output": {
+      "item": "hot_ice",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "enriched_carbon",
+        "qty": 1,
+        "viaRecipe": "enriched_carbon_recipe"
+      },
+      {
+        "item": "nitrogen_salt",
+        "qty": 1,
+        "viaRecipe": "nitrogen_salt_recipe"
+      }
+    ],
+    "value": 320000
+  },
+  {
+    "id": "hydraulic_wiring_recipe",
+    "name": "Hydraulic Wiring",
+    "output": {
+      "item": "hydraulic_wiring",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "di_hydrogen",
+        "qty": 40
+      },
+      {
+        "item": "carbon_nanotubes",
+        "qty": 2,
+        "viaRecipe": "carbon_nanotubes_recipe"
+      },
+      {
+        "item": "salt",
+        "qty": 20
+      }
+    ],
+    "value": 3600
+  },
+  {
+    "id": "hydrothermal_fuel_cell_recipe",
+    "name": "Hydrothermal Fuel Cell",
+    "output": {
+      "item": "hydrothermal_fuel_cell",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "carbon",
+        "qty": 40
+      },
+      {
+        "item": "salt",
+        "qty": 40
+      },
+      {
+        "item": "cyto_phosphate",
+        "qty": 40
+      }
+    ],
+    "value": 7200
+  },
+  {
+    "id": "impossible_membrane_recipe",
+    "name": "Impossible Membrane",
+    "output": {
+      "item": "impossible_membrane",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "hypnotic_eye",
+        "qty": 1
+      },
+      {
+        "item": "chromatic_metal",
+        "qty": 100
+      },
+      {
+        "item": "living_water",
+        "qty": 150
+      }
+    ],
+    "value": 1616
+  },
+  {
+    "id": "ion_battery_recipe",
+    "name": "Ion Battery",
+    "output": {
+      "item": "ion_battery",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ferrite_dust",
+        "qty": 5
+      },
+      {
+        "item": "cobalt",
+        "qty": 10
+      }
+    ],
+    "value": 200
+  },
+  {
+    "id": "iridesite_recipe",
+    "name": "Iridesite",
+    "output": {
+      "item": "iridesite",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "aronium",
+        "qty": 1,
+        "viaRecipe": "aronium_recipe"
+      },
+      {
+        "item": "grantine",
+        "qty": 1,
+        "viaRecipe": "grantine_recipe"
+      },
+      {
+        "item": "magno_gold",
+        "qty": 1,
+        "viaRecipe": "magno_gold_recipe"
+      }
+    ],
+    "value": 150000
+  },
+  {
+    "id": "lemmium_recipe",
+    "name": "Lemmium",
+    "output": {
+      "item": "lemmium",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "pure_ferrite",
+        "qty": 100
+      },
+      {
+        "item": "uranium",
+        "qty": 50
+      }
+    ],
+    "value": 25000
+  },
+  {
+    "id": "life_support_gel_recipe",
+    "name": "Life Support Gel",
+    "output": {
+      "item": "life_support_gel",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "carbon",
+        "qty": 20
+      },
+      {
+        "item": "di_hydrogen_jelly",
+        "qty": 1,
+        "viaRecipe": "di_hydrogen_jelly_recipe"
+      }
+    ],
+    "value": 200
+  },
+  {
+    "id": "liquid_explosive_recipe",
+    "name": "Liquid Explosive",
+    "output": {
+      "item": "liquid_explosive",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "acid",
+        "qty": 1,
+        "viaRecipe": "acid_recipe"
+      },
+      {
+        "item": "unstable_gel",
+        "qty": 1,
+        "viaRecipe": "unstable_gel_recipe"
+      }
+    ],
+    "value": 800500
+  },
+  {
+    "id": "living_glass_recipe",
+    "name": "Living Glass",
+    "output": {
+      "item": "living_glass",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "glass",
+        "qty": 5,
+        "viaRecipe": "glass_recipe"
+      },
+      {
+        "item": "lubricant",
+        "qty": 1,
+        "viaRecipe": "lubricant_recipe"
+      }
+    ],
+    "value": 566000
+  },
+  {
+    "id": "lubricant_recipe",
+    "name": "Lubricant",
+    "output": {
+      "item": "lubricant",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "gamma_root",
+        "qty": 400
+      },
+      {
+        "item": "faecium",
+        "qty": 50
+      }
+    ],
+    "value": 110000
+  },
+  {
+    "id": "magnetic_resonator_recipe",
+    "name": "Magnetic Resonator",
+    "output": {
+      "item": "magnetic_resonator",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "magnetised_ferrite",
+        "qty": 40
+      },
+      {
+        "item": "ionised_cobalt",
+        "qty": 40
+      }
+    ],
+    "value": 6150
+  },
+  {
+    "id": "magno_gold_recipe",
+    "name": "Magno-Gold",
+    "output": {
+      "item": "magno_gold",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ionised_cobalt",
+        "qty": 50
+      },
+      {
+        "item": "phosphorus",
+        "qty": 50
+      }
+    ],
+    "value": 25000
+  },
+  {
+    "id": "metal_plating_recipe",
+    "name": "Metal Plating",
+    "output": {
+      "item": "metal_plating",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ferrite_dust",
+        "qty": 50
+      }
+    ],
+    "value": 800
+  },
+  {
+    "id": "microprocessor_recipe",
+    "name": "Microprocessor",
+    "output": {
+      "item": "microprocessor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "carbon_nanotubes",
+        "qty": 1,
+        "viaRecipe": "carbon_nanotubes_recipe"
+      },
+      {
+        "item": "chromatic_metal",
+        "qty": 40
+      }
+    ],
+    "value": 2000
+  },
+  {
+    "id": "mind_control_device_recipe",
+    "name": "Mind Control Device",
+    "output": {
+      "item": "mind_control_device",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "gold",
+        "qty": 50
+      },
+      {
+        "item": "solar_mirror",
+        "qty": 1,
+        "viaRecipe": "solar_mirror_recipe"
+      }
+    ],
+    "value": 75000
+  },
+  {
+    "id": "mineral_compressor_recipe",
+    "name": "Mineral Compressor",
+    "output": {
+      "item": "mineral_compressor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "gold",
+        "qty": 50
+      },
+      {
+        "item": "hydraulic_wiring",
+        "qty": 1,
+        "viaRecipe": "hydraulic_wiring_recipe"
+      }
+    ],
+    "value": 75000
+  },
+  {
+    "id": "mordite_root_recipe",
+    "name": "Mordite Root",
+    "output": {
+      "item": "mordite_root",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "mordite",
+        "qty": 40
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "nipnip_recipe",
+    "name": "NipNip",
+    "output": {
+      "item": "nipnip",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "nipnip_buds",
+        "qty": 1
+      },
+      {
+        "item": "faecium",
+        "qty": 20
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "nitrogen_salt_recipe",
+    "name": "Nitrogen Salt",
+    "output": {
+      "item": "nitrogen_salt",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "condensed_carbon",
+        "qty": 50
+      },
+      {
+        "item": "nitrogen",
+        "qty": 250
+      }
+    ],
+    "value": 50000
+  },
+  {
+    "id": "organic_catalyst_recipe",
+    "name": "Organic Catalyst",
+    "output": {
+      "item": "organic_catalyst",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "enriched_carbon",
+        "qty": 1,
+        "viaRecipe": "enriched_carbon_recipe"
+      },
+      {
+        "item": "thermic_condensate",
+        "qty": 1,
+        "viaRecipe": "thermic_condensate_recipe"
+      }
+    ],
+    "value": 320000
+  },
+  {
+    "id": "poly_fibre_recipe",
+    "name": "Poly Fibre",
+    "output": {
+      "item": "poly_fibre",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "cactus_flesh",
+        "qty": 100
+      },
+      {
+        "item": "star_bulb",
+        "qty": 200
+      }
+    ],
+    "value": 130000
+  },
+  {
+    "id": "portable_reactor_recipe",
+    "name": "Portable Reactor",
+    "output": {
+      "item": "portable_reactor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "liquid_explosive",
+        "qty": 1,
+        "viaRecipe": "liquid_explosive_recipe"
+      },
+      {
+        "item": "fusion_accelerant",
+        "qty": 1,
+        "viaRecipe": "fusion_accelerant_recipe"
+      }
+    ],
+    "value": 4200000
+  },
+  {
+    "id": "projectile_ammunition_recipe",
+    "name": "Projectile Ammunition",
+    "output": {
+      "item": "projectile_ammunition",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "ferrite_dust",
+        "qty": 50
+      }
+    ],
+    "value": 1
+  },
+  {
+    "id": "pulsating_core_recipe",
+    "name": "Pulsating Core",
+    "output": {
+      "item": "pulsating_core",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "mordite",
+        "qty": 80
+      },
+      {
+        "item": "gold",
+        "qty": 100
+      },
+      {
+        "item": "liquid_sun",
+        "qty": 250
+      }
+    ],
+    "value": 1616
+  },
+  {
+    "id": "quantum_computer_recipe",
+    "name": "Quantum Computer",
+    "output": {
+      "item": "quantum_computer",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "antimatter",
+        "qty": 1,
+        "viaRecipe": "antimatter_recipe"
+      },
+      {
+        "item": "microprocessor",
+        "qty": 1,
+        "viaRecipe": "microprocessor_recipe"
+      },
+      {
+        "item": "chromatic_metal",
+        "qty": 25
+      }
+    ],
+    "value": 4200
+  },
+  {
+    "id": "quantum_processor_recipe",
+    "name": "Quantum Processor",
+    "output": {
+      "item": "quantum_processor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "circuit_board",
+        "qty": 1,
+        "viaRecipe": "circuit_board_recipe"
+      },
+      {
+        "item": "superconductor",
+        "qty": 1,
+        "viaRecipe": "superconductor_recipe"
+      }
+    ],
+    "value": 4400000
+  },
+  {
+    "id": "seeds_of_glass_recipe",
+    "name": "Seeds of Glass",
+    "output": {
+      "item": "seeds_of_glass",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "magnetised_ferrite",
+        "qty": 100
+      },
+      {
+        "item": "fragmented_qualia",
+        "qty": 100
+      }
+    ],
+    "value": 1616
+  },
+  {
+    "id": "semiconductor_recipe",
+    "name": "Semiconductor",
+    "output": {
+      "item": "semiconductor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "nitrogen_salt",
+        "qty": 1,
+        "viaRecipe": "nitrogen_salt_recipe"
+      },
+      {
+        "item": "thermic_condensate",
+        "qty": 1,
+        "viaRecipe": "thermic_condensate_recipe"
+      }
+    ],
+    "value": 320000
+  },
+  {
+    "id": "solar_mirror_recipe",
+    "name": "Solar Mirror",
+    "output": {
+      "item": "solar_mirror",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "chromatic_metal",
+        "qty": 25
+      },
+      {
+        "item": "silver",
+        "qty": 30
+      },
+      {
+        "item": "gold",
+        "qty": 40
+      }
+    ],
+    "value": 6150
+  },
+  {
+    "id": "solar_vine_recipe",
+    "name": "Solar Vine",
+    "output": {
+      "item": "solar_vine",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "phosphorus",
+        "qty": 25
+      },
+      {
+        "item": "solanium",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "star_bramble_recipe",
+    "name": "Star Bramble",
+    "output": {
+      "item": "star_bramble",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "paraffinium",
+        "qty": 25
+      },
+      {
+        "item": "star_bulb",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "starshield_battery_recipe",
+    "name": "Starshield Battery",
+    "output": {
+      "item": "starshield_battery",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "tritium",
+        "qty": 50
+      },
+      {
+        "item": "gold",
+        "qty": 20
+      }
+    ],
+    "value": 500
+  },
+  {
+    "id": "starship_launch_fuel_recipe",
+    "name": "Starship Launch Fuel",
+    "output": {
+      "item": "starship_launch_fuel",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "di_hydrogen",
+        "qty": 40
+      },
+      {
+        "item": "metal_plating",
+        "qty": 1,
+        "viaRecipe": "metal_plating_recipe"
+      }
+    ],
+    "value": 450
+  },
+  {
+    "id": "stasis_device_recipe",
+    "name": "Stasis Device",
+    "output": {
+      "item": "stasis_device",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "cryogenic_chamber",
+        "qty": 1,
+        "viaRecipe": "cryogenic_chamber_recipe"
+      },
+      {
+        "item": "quantum_processor",
+        "qty": 1,
+        "viaRecipe": "quantum_processor_recipe"
+      },
+      {
+        "item": "iridesite",
+        "qty": 1,
+        "viaRecipe": "iridesite_recipe"
+      }
+    ],
+    "value": 15600000
+  },
+  {
+    "id": "superconductor_recipe",
+    "name": "Superconductor",
+    "output": {
+      "item": "superconductor",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "enriched_carbon",
+        "qty": 1,
+        "viaRecipe": "enriched_carbon_recipe"
+      },
+      {
+        "item": "semiconductor",
+        "qty": 1,
+        "viaRecipe": "semiconductor_recipe"
+      }
+    ],
+    "value": 1500000
+  },
+  {
+    "id": "thermic_condensate_recipe",
+    "name": "Thermic Condensate",
+    "output": {
+      "item": "thermic_condensate",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "condensed_carbon",
+        "qty": 50
+      },
+      {
+        "item": "sulphurine",
+        "qty": 250
+      }
+    ],
+    "value": 50000
+  },
+  {
+    "id": "unstable_gel_recipe",
+    "name": "Unstable Gel",
+    "output": {
+      "item": "unstable_gel",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "cactus_flesh",
+        "qty": 200
+      }
+    ],
+    "value": 50000
+  },
+  {
+    "id": "unstable_plasma_recipe",
+    "name": "Unstable Plasma",
+    "output": {
+      "item": "unstable_plasma",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "oxygen",
+        "qty": 50
+      },
+      {
+        "item": "metal_plating",
+        "qty": 1,
+        "viaRecipe": "metal_plating_recipe"
+      }
+    ],
+    "value": 5750
+  },
+  {
+    "id": "venom_urchin_recipe",
+    "name": "Venom Urchin",
+    "output": {
+      "item": "venom_urchin",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "emeril",
+        "qty": 100
+      },
+      {
+        "item": "gold",
+        "qty": 50
+      }
+    ],
+    "value": 3
+  },
+  {
+    "id": "warp_cell_recipe",
+    "name": "Warp Cell",
+    "output": {
+      "item": "warp_cell",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "antimatter",
+        "qty": 1,
+        "viaRecipe": "antimatter_recipe"
+      },
+      {
+        "item": "antimatter_housing",
+        "qty": 1,
+        "viaRecipe": "antimatter_housing_recipe"
+      }
+    ],
+    "value": 46750
+  },
+  {
+    "id": "warp_hypercore_recipe",
+    "name": "Warp Hypercore",
+    "output": {
+      "item": "warp_hypercore",
+      "qty": 1
+    },
+    "components": [
+      {
+        "item": "storm_crystal",
+        "qty": 1
+      },
+      {
+        "item": "antimatter",
+        "qty": 1,
+        "viaRecipe": "antimatter_recipe"
+      }
+    ],
+    "value": 46750
   }
 ]
