@@ -1,0 +1,54 @@
+[
+  {
+    "id": "pulse_engine",
+    "name": "Pulse Engine",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 120,
+    "adjacency": {
+      "pulse_engine": 20,
+      "hyperdrive": 15
+    },
+    "superchargeMultiplier": 1.3,
+    "tags": ["mobility"]
+  },
+  {
+    "id": "hyperdrive",
+    "name": "Hyperdrive",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 160,
+    "adjacency": {
+      "pulse_engine": 12,
+      "hyperdrive": 25
+    },
+    "superchargeMultiplier": 1.35,
+    "tags": ["warp"]
+  },
+  {
+    "id": "launch_thrusters",
+    "name": "Launch Thrusters",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 90,
+    "adjacency": {
+      "pulse_engine": 8,
+      "shield_life_support": 5
+    },
+    "superchargeMultiplier": 1.25,
+    "tags": ["utility"]
+  },
+  {
+    "id": "shield_life_support",
+    "name": "Deflector Shield",
+    "platform": "starship",
+    "slotType": "tech",
+    "baseValue": 140,
+    "adjacency": {
+      "shield_life_support": 18,
+      "launch_thrusters": 6
+    },
+    "superchargeMultiplier": 1.4,
+    "tags": ["defense"]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "quickPick": [
+    "oxygen",
+    "sodium",
+    "chromatic_metal",
+    "activated_indium",
+    "paraffinium",
+    "gravitino_ball",
+    "frost_crystal",
+    "storm_crystal"
+  ],
+  "aliases": {
+    "oxy": "oxygen",
+    "para": "paraffinium"
+  }
+}

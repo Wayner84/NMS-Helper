@@ -1,0 +1,31 @@
+[
+  {
+    "id": "carbon_nanotubes_recipe",
+    "name": "Carbon Nanotubes",
+    "output": {"item": "carbon_nanotubes", "qty": 1},
+    "components": [
+      {"item": "carbon", "qty": 50}
+    ],
+    "value": 550
+  },
+  {
+    "id": "microprocessor_recipe",
+    "name": "Microprocessor",
+    "output": {"item": "microprocessor", "qty": 1},
+    "components": [
+      {"item": "chromatic_metal", "qty": 40},
+      {"item": "carbon_nanotubes", "qty": 1, "viaRecipe": "carbon_nanotubes_recipe"}
+    ],
+    "value": 2000
+  },
+  {
+    "id": "circuit_board_recipe",
+    "name": "Circuit Board",
+    "output": {"item": "circuit_board", "qty": 1},
+    "components": [
+      {"item": "microprocessor", "qty": 2, "viaRecipe": "microprocessor_recipe"},
+      {"item": "chromatic_metal", "qty": 120}
+    ],
+    "value": 9160
+  }
+]

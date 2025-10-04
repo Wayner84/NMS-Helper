@@ -1,0 +1,22 @@
+[
+  {
+    "id": "freighter-warp-chaining",
+    "title": "Chain freighter warps",
+    "body": "After summoning your freighter, you can trigger another warp immediately to skip system cooldowns and reach missions faster.",
+    "tags": ["freighter", "travel"],
+    "sourceName": "Community observation"
+  },
+  {
+    "id": "refiner-batch",
+    "title": "Batch refiner inputs",
+    "body": "Stack identical materials in one slot before starting the refiner to avoid partial leftovers and maximise time spent in menus.",
+    "tags": ["refiner", "quality-of-life"]
+  },
+  {
+    "id": "settlement-debt",
+    "title": "Pay off settlement debt with products",
+    "body": "Supplying high-value crafted goods counts toward settlement debt, letting you clear timers early without waiting for passive income.",
+    "tags": ["settlements", "economy"],
+    "url": "https://example.com/tips"
+  }
+]
