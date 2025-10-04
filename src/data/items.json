@@ -3384,6 +3384,12 @@
     "value": 0
   },
   {
+    "id": "deep_space_lure",
+    "name": "Deep-Space Lure",
+    "group": "product",
+    "value": 3280
+  },
+  {
     "id": "defence_chit",
     "name": "Defence Chit",
     "group": "product",
