@@ -1,0 +1,23 @@
+{
+  "name": "No Man's Sky Helper",
+  "short_name": "NMS Helper",
+  "description": "Offline-ready refiner, crafting, cooking, planner, portals, hints, and notes for No Man's Sky.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

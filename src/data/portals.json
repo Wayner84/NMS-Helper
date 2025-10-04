@@ -1,0 +1,20 @@
+[
+  {
+    "id": "euclid-centre-lush",
+    "galaxyIndex": 1,
+    "region": "Lush trade route",
+    "portal": "10A2:0084:0C2B",
+    "tags": ["lush", "trade", "centre-adjacent"],
+    "systemCoords": "H:0005:00FF:0123:0ABC",
+    "notes": "Close to the galactic core. Rich economy."
+  },
+  {
+    "id": "hilbert-activated-indium",
+    "galaxyIndex": 2,
+    "region": "Activated indium hot spot",
+    "portal": "20FF:00AA:0BCD",
+    "tags": ["activated_indium", "resource"],
+    "systemCoords": "H:0020:00C1:00A4:0FEE",
+    "url": "https://example.com/community-map"
+  }
+]

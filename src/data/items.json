@@ -1,0 +1,21 @@
+[
+  {"id":"ferrite_dust","name":"Ferrite Dust","group":"minerals","value":14},
+  {"id":"pure_ferrite","name":"Pure Ferrite","group":"minerals","value":28},
+  {"id":"magnetised_ferrite","name":"Magnetised Ferrite","group":"minerals","value":62},
+  {"id":"carbon","name":"Carbon","group":"organics","value":12},
+  {"id":"condensed_carbon","name":"Condensed Carbon","group":"organics","value":24},
+  {"id":"chromatic_metal","name":"Chromatic Metal","group":"alloys","value":245},
+  {"id":"cobalt","name":"Cobalt","group":"minerals","value":198},
+  {"id":"ionised_cobalt","name":"Ionised Cobalt","group":"minerals","value":302},
+  {"id":"microprocessor","name":"Microprocessor","group":"components","value":2000},
+  {"id":"carbon_nanotubes","name":"Carbon Nanotubes","group":"components","value":550},
+  {"id":"circuit_board","name":"Circuit Board","group":"components","value":9160},
+  {"id":"sodium","name":"Sodium","group":"minerals","value":41},
+  {"id":"oxygen","name":"Oxygen","group":"organics","value":34},
+  {"id":"fresh_milk","name":"Fresh Milk","group":"cooking","value":100},
+  {"id":"processed_meat","name":"Processed Meat","group":"cooking","value":420},
+  {"id":"creamy_sauce","name":"Creamy Sauce","group":"cooking","value":420},
+  {"id":"meaty_chunks","name":"Meaty Chunks","group":"cooking","value":180},
+  {"id":"mystery_meat_stew","name":"Mystery Meat Stew","group":"cooking","value":900},
+  {"id":"nutrient_paste","name":"Nutrient Paste","group":"cooking","value":220}
+]

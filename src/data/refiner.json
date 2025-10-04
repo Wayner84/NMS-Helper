@@ -1,0 +1,43 @@
+[
+  {
+    "id": "pure_ferrite_from_dust",
+    "name": "Pure Ferrite",
+    "inputs": [{"item": "ferrite_dust", "qty": 2}],
+    "output": {"item": "pure_ferrite", "qty": 1},
+    "timeSeconds": 30
+  },
+  {
+    "id": "magnetised_from_pure",
+    "name": "Magnetised Ferrite",
+    "inputs": [{"item": "pure_ferrite", "qty": 2}],
+    "output": {"item": "magnetised_ferrite", "qty": 1},
+    "timeSeconds": 45
+  },
+  {
+    "id": "condensed_from_carbon",
+    "name": "Condensed Carbon",
+    "inputs": [{"item": "carbon", "qty": 2}],
+    "output": {"item": "condensed_carbon", "qty": 1},
+    "timeSeconds": 30
+  },
+  {
+    "id": "chromatic_from_copper",
+    "name": "Chromatic Alloy",
+    "inputs": [
+      {"item": "condensed_carbon", "qty": 1},
+      {"item": "ionised_cobalt", "qty": 1}
+    ],
+    "output": {"item": "chromatic_metal", "qty": 2},
+    "timeSeconds": 60
+  },
+  {
+    "id": "nutrient_paste",
+    "name": "Nutrient Paste",
+    "inputs": [
+      {"item": "processed_meat", "qty": 1},
+      {"item": "fresh_milk", "qty": 1}
+    ],
+    "output": {"item": "nutrient_paste", "qty": 1},
+    "timeSeconds": 40
+  }
+]

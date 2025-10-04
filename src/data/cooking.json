@@ -1,0 +1,37 @@
+[
+  {
+    "id": "creamy_sauce_recipe",
+    "name": "Creamy Sauce",
+    "inputs": [
+      {"item": "fresh_milk", "qty": 1},
+      {"item": "nutrient_paste", "qty": 1}
+    ],
+    "output": {"item": "creamy_sauce", "qty": 1},
+    "heated": false,
+    "refined": true,
+    "mixed": true
+  },
+  {
+    "id": "processed_meat_recipe",
+    "name": "Processed Meat",
+    "inputs": [
+      {"item": "meaty_chunks", "qty": 1}
+    ],
+    "output": {"item": "processed_meat", "qty": 1},
+    "heated": true,
+    "refined": false,
+    "mixed": false
+  },
+  {
+    "id": "mystery_meat_stew_recipe",
+    "name": "Mystery Meat Stew",
+    "inputs": [
+      {"item": "processed_meat", "qty": 1},
+      {"item": "creamy_sauce", "qty": 1}
+    ],
+    "output": {"item": "mystery_meat_stew", "qty": 1},
+    "heated": true,
+    "refined": false,
+    "mixed": true
+  }
+]
