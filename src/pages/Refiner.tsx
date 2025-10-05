@@ -18,6 +18,52 @@ interface DecoratedRecipe {
   searchText: string
 }
 
+const resourceIconModules = import.meta.glob('../assets/resources/*.{png,jpg,jpeg,webp,svg}', {
+  eager: true,
+  import: 'default'
+}) as Record<string, string>
+
+const sanitizeKey = (value: string): string =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+
+const resourceIconMap = new Map<string, string>()
+
+Object.entries(resourceIconModules).forEach(([path, src]) => {
+  const fileName = path.split('/').pop() ?? ''
+  const baseName = fileName.replace(/\.[^/.]+$/, '')
+  const variations = new Set<string>([
+    baseName.toLowerCase(),
+    sanitizeKey(baseName),
+    sanitizeKey(baseName).replace(/_/g, '')
+  ])
+  variations.forEach((key) => {
+    if (key) {
+      resourceIconMap.set(key, src)
+    }
+  })
+})
+
+const getResourceIcon = (item: DecoratedInput): string | undefined => {
+  const candidates = [
+    item.id.toLowerCase(),
+    sanitizeKey(item.id),
+    sanitizeKey(item.id).replace(/_/g, ''),
+    sanitizeKey(item.name),
+    sanitizeKey(item.name).replace(/_/g, '')
+  ]
+  for (const key of candidates) {
+    if (!key) continue
+    const match = resourceIconMap.get(key)
+    if (match) {
+      return match
+    }
+  }
+  return undefined
+}
+
 const fallbackName = (itemId: string): string =>
   itemId
     .split('_')
@@ -26,6 +72,44 @@ const fallbackName = (itemId: string): string =>
 
 const getItemName = (itemsMap: Map<string, Item>, itemId: string): string =>
   itemsMap.get(itemId)?.name ?? fallbackName(itemId)
+
+const ItemCell = ({
+  item,
+  emphasize,
+  description
+}: {
+  item: DecoratedInput
+  emphasize?: boolean
+  description?: string
+}): ReactElement => {
+  const icon = getResourceIcon(item)
+
+  return (
+    <div className="flex items-start gap-3">
+      {icon ? (
+        <img
+          src={icon}
+          alt={`${item.name} icon`}
+          loading="lazy"
+          className="h-12 w-12 shrink-0 rounded-full border border-slate-700 bg-surface/80 object-contain p-1 shadow-inner"
+        />
+      ) : (
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-700 bg-surface/60 text-xs uppercase tracking-wide text-slate-500">
+          {item.name.slice(0, 2).toUpperCase()}
+        </div>
+      )}
+      <div className="space-y-0.5">
+        <p className={emphasize ? 'font-semibold text-primary' : 'font-medium text-slate-100'}>
+          {item.name}
+        </p>
+        <p className="text-xs text-slate-400">Qty {item.qty.toLocaleString()}</p>
+        {description ? (
+          <p className="text-[11px] uppercase tracking-wide text-slate-500">{description}</p>
+        ) : null}
+      </div>
+    </div>
+  )
+}
 
 const Refiner = (): ReactElement => {
   const { refinerRecipes, itemsMap } = useAppStore((state) => ({
@@ -120,23 +204,20 @@ const Refiner = (): ReactElement => {
                     {inputs.map((input, index) => (
                       <td key={`${recipe.id}-in-${index}`} className="px-4 py-3 align-top">
                         {input ? (
-                          <div className="space-y-0.5">
-                            <p className="font-medium text-slate-100">{input.name}</p>
-                            <p className="text-xs text-slate-400">Qty {input.qty.toLocaleString()}</p>
-                          </div>
+                          <ItemCell item={input} />
                         ) : (
-                          <span className="text-slate-600">—</span>
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-dashed border-slate-700/60 bg-surface/40 text-[10px] uppercase tracking-wide text-slate-600">
+                            Empty
+                          </div>
                         )}
                       </td>
                     ))}
                     <td className="px-4 py-3 align-top">
-                      <div className="space-y-0.5">
-                        <p className="font-semibold text-primary">{recipe.output.name}</p>
-                        <p className="text-xs text-slate-400">Qty {recipe.output.qty.toLocaleString()}</p>
-                        {recipe.name ? (
-                          <p className="text-[11px] uppercase tracking-wide text-slate-500">{recipe.name}</p>
-                        ) : null}
-                      </div>
+                      <ItemCell
+                        item={recipe.output}
+                        emphasize
+                        description={recipe.name ? recipe.name : undefined}
+                      />
                     </td>
                     <td className="px-4 py-3 align-top text-slate-300">
                       {recipe.timeSeconds > 0 ? `${recipe.timeSeconds}s` : 'Instant'}
