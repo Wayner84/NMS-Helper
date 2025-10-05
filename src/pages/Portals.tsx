@@ -44,25 +44,30 @@ const formatPortal = (portal: string): string => {
 const PortalCard = ({
   entry,
   onCopy,
-  onShare
+  onShare,
+  onDelete,
+  canDelete
 }: {
   entry: PortalEntry
   onCopy: (text: string) => void
   onShare: (entry: PortalEntry) => void
+  onDelete?: (id: string) => void
+  canDelete?: boolean
 }) => {
+  const glyphData = describePortal(entry.portal)
   const glyphIndexes = portalHexToGlyphIndexes(entry.portal)
   const glyphLabels = glyphIndexesToLabels(glyphIndexes)
-  const glyphText = describePortal(entry.portal).glyphs
-  const glyphChars = glyphText.split(' ')
+  const glyphImages = glyphData.images
+  const glyphText = glyphData.glyphs
 
   return (
     <article className="rounded-lg border border-slate-700 bg-surface/60 p-4 text-sm text-slate-200">
-      <header className="flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <h3 className="font-semibold text-primary">{entry.region}</h3>
+      <header className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-1">
+          <h3 className="text-base font-semibold text-primary">{entry.region}</h3>
           <p className="text-xs text-slate-400">Galaxy #{entry.galaxyIndex}</p>
         </div>
-        <div className="flex gap-2 text-xs">
+        <div className="flex flex-wrap gap-2 text-xs sm:justify-end">
           <button
             type="button"
             className="rounded border border-slate-600 px-2 py-1 hover:border-primary"
@@ -84,34 +89,47 @@ const PortalCard = ({
           >
             Share
           </button>
+          {canDelete && onDelete ? (
+            <button
+              type="button"
+              className="rounded border border-rose-400 px-2 py-1 text-rose-200 hover:bg-rose-500/10"
+              onClick={() => onDelete(entry.id)}
+            >
+              Delete
+            </button>
+          ) : null}
         </div>
       </header>
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-3 grid grid-cols-6 gap-2 sm:grid-cols-12">
         {glyphIndexes.map((glyphIndex, index) => (
-          <span
+          <div
             key={`${entry.id}-glyph-${index}`}
-            aria-label={glyphLabels[index] ?? `Glyph ${glyphIndex}`}
-            className="flex h-10 w-10 items-center justify-center rounded bg-surface/80 text-lg"
+            className="flex items-center justify-center rounded bg-surface/80 p-1"
           >
-            {glyphChars[index] ?? '？'}
-          </span>
+            <img
+              src={glyphImages[index] ?? ''}
+              alt={glyphLabels[index] ?? `Glyph ${glyphIndex}`}
+              className="h-10 w-10 object-contain"
+              loading="lazy"
+            />
+          </div>
         ))}
       </div>
-      <dl className="mt-3 space-y-1 text-xs text-slate-400">
-        <div className="flex justify-between">
-          <dt>Portal</dt>
+      <dl className="mt-3 space-y-2 text-xs text-slate-400">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+          <dt className="font-semibold text-slate-300">Portal</dt>
           <dd className="font-mono text-slate-200">{formatPortal(entry.portal)}</dd>
         </div>
         {entry.systemCoords ? (
-          <div className="flex justify-between">
-            <dt>Coords</dt>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+            <dt className="font-semibold text-slate-300">Coords</dt>
             <dd className="font-mono text-slate-300">{entry.systemCoords}</dd>
           </div>
         ) : null}
         {entry.url ? (
-          <div className="flex justify-between">
-            <dt>Source</dt>
-            <dd>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+            <dt className="font-semibold text-slate-300">Source</dt>
+            <dd className="text-slate-200">
               <a href={entry.url} target="_blank" rel="noreferrer" className="text-primary">
                 Link
               </a>
@@ -132,10 +150,12 @@ const PortalCard = ({
 }
 
 const Portals = (): JSX.Element => {
-  const { portals, addPortalEntry, importPortals } = useAppStore((state) => ({
+  const { portals, portalCustom, addPortalEntry, importPortals, removePortalEntry } = useAppStore((state) => ({
     portals: getAllPortals(state),
+    portalCustom: state.portalCustom,
     addPortalEntry: state.addPortalEntry,
-    importPortals: state.importPortals
+    importPortals: state.importPortals,
+    removePortalEntry: state.removePortalEntry
   }))
 
   const [search, setSearch] = useState('')
@@ -151,6 +171,8 @@ const Portals = (): JSX.Element => {
     portals.forEach((entry) => entry.tags?.forEach((tag) => set.add(tag)))
     return Array.from(set).sort()
   }, [portals])
+
+  const customPortalIds = useMemo(() => new Set(portalCustom.map((entry) => entry.id)), [portalCustom])
 
   const filteredPortals = useMemo(
     () =>
@@ -342,7 +364,16 @@ const Portals = (): JSX.Element => {
           <VirtualList
             items={filteredPortals}
             estimateSize={200}
-            renderRow={(entry) => <PortalCard key={entry.id} entry={entry} onCopy={handleCopy} onShare={handleShare} />}
+            renderRow={(entry) => (
+              <PortalCard
+                key={entry.id}
+                entry={entry}
+                onCopy={handleCopy}
+                onShare={handleShare}
+                onDelete={removePortalEntry}
+                canDelete={customPortalIds.has(entry.id)}
+              />
+            )}
           />
         )}
       </section>

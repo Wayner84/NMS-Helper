@@ -13,6 +13,7 @@ const Planner = (): JSX.Element => {
     placeModule,
     pushBenchModule,
     removeBenchModule,
+    clearPlannerModules,
     suggestPlanner,
     importPlanner,
     techModules,
@@ -25,6 +26,7 @@ const Planner = (): JSX.Element => {
     placeModule: state.placeModule,
     pushBenchModule: state.pushBenchModule,
     removeBenchModule: state.removeBenchModule,
+    clearPlannerModules: state.clearPlannerModules,
     suggestPlanner: state.suggestPlanner,
     importPlanner: state.importPlanner,
     techModules: state.techModules,
@@ -129,9 +131,11 @@ const Planner = (): JSX.Element => {
             </label>
           </div>
         </div>
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm text-slate-300">
-          <span>Current score: <strong>{score}</strong></span>
-          <div className="flex gap-2">
+        <div className="mt-4 flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            Current score: <strong>{score}</strong>
+          </span>
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-end">
             <button
               type="button"
               onClick={handleExport}
@@ -148,6 +152,13 @@ const Planner = (): JSX.Element => {
             </button>
             <button
               type="button"
+              onClick={clearPlannerModules}
+              className="rounded-full border border-slate-600 px-4 py-2 hover:border-primary"
+            >
+              Clear all slots
+            </button>
+            <button
+              type="button"
               onClick={suggestPlanner}
               className="rounded-full border border-primary px-4 py-2 font-semibold text-primary hover:bg-primary/10"
             >
@@ -159,75 +170,77 @@ const Planner = (): JSX.Element => {
 
       <section className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="rounded-xl border border-slate-700 bg-surface/70 p-4">
-          <div
-            className="grid gap-3"
-            style={{
-              gridTemplateColumns: `repeat(${planner.grid.cols}, minmax(72px, 1fr))`
-            }}
-          >
-            {planner.grid.slots.map((slot, index) => {
-              const module = slot.moduleId ? techModuleMap.get(slot.moduleId) : undefined
-              return (
-                <div
-                  key={slot.id}
-                  className={clsx(
-                    'flex flex-col gap-2 rounded border p-2 text-xs',
-                    slot.supercharged ? 'border-primary/70 bg-primary/5' : 'border-slate-700 bg-surface/80'
-                  )}
-                >
-                  <button
-                    type="button"
-                    className="flex h-16 items-center justify-center rounded border border-dashed border-slate-600 bg-surface/60 px-2 text-center text-sm text-slate-200 hover:border-primary"
-                    onClick={() => handleSlotClick(index)}
-                    onContextMenu={(event) => {
-                      event.preventDefault()
-                      placeModule(index, null)
-                    }}
+          <div className="overflow-x-auto pb-2">
+            <div
+              className="grid min-w-max gap-3"
+              style={{
+                gridTemplateColumns: `repeat(${planner.grid.cols}, minmax(72px, 1fr))`
+              }}
+            >
+              {planner.grid.slots.map((slot, index) => {
+                const module = slot.moduleId ? techModuleMap.get(slot.moduleId) : undefined
+                return (
+                  <div
+                    key={slot.id}
+                    className={clsx(
+                      'flex w-[72px] flex-col gap-2 rounded border p-2 text-xs sm:w-auto',
+                      slot.supercharged ? 'border-primary/70 bg-primary/5' : 'border-slate-700 bg-surface/80'
+                    )}
                   >
-                    {module ? module.name : activeModuleId ? 'Place module' : 'Empty slot'}
-                  </button>
-                  <div className="flex items-center justify-between gap-2">
                     <button
                       type="button"
-                      className="flex-1 rounded border border-slate-600 px-2 py-1 text-[11px] uppercase tracking-wide hover:border-primary"
-                      onClick={() => toggleSlotType(slot, index)}
+                      className="flex h-16 items-center justify-center rounded border border-dashed border-slate-600 bg-surface/60 px-2 text-center text-sm text-slate-200 hover:border-primary"
+                      onClick={() => handleSlotClick(index)}
+                      onContextMenu={(event) => {
+                        event.preventDefault()
+                        placeModule(index, null)
+                      }}
                     >
-                      {slot.type}
+                      {module ? module.name : activeModuleId ? 'Place module' : 'Empty slot'}
                     </button>
-                    <button
-                      type="button"
-                      aria-pressed={slot.supercharged}
-                      className={clsx(
-                        'rounded border px-2 py-1 text-[11px] uppercase tracking-wide',
-                        slot.supercharged ? 'border-primary bg-primary/20 text-primary' : 'border-slate-600 hover:border-primary'
-                      )}
-                      onClick={() => toggleSupercharge(slot, index)}
-                    >
-                      SC
-                    </button>
+                    <div className="flex items-center justify-between gap-2">
+                      <button
+                        type="button"
+                        className="flex-1 rounded border border-slate-600 px-2 py-1 text-[11px] uppercase tracking-wide hover:border-primary"
+                        onClick={() => toggleSlotType(slot, index)}
+                      >
+                        {slot.type}
+                      </button>
+                      <button
+                        type="button"
+                        aria-pressed={slot.supercharged}
+                        className={clsx(
+                          'rounded border px-2 py-1 text-[11px] uppercase tracking-wide',
+                          slot.supercharged ? 'border-primary bg-primary/20 text-primary' : 'border-slate-600 hover:border-primary'
+                        )}
+                        onClick={() => toggleSupercharge(slot, index)}
+                      >
+                        SC
+                      </button>
+                    </div>
+                    {module ? (
+                      <dl className="space-y-1 text-[11px] text-slate-400">
+                        <div className="flex justify-between">
+                          <dt>Base</dt>
+                          <dd>{module.baseValue}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-[10px] uppercase tracking-wide text-slate-500">Adjacency boosts</dt>
+                          <dd className="mt-1 space-y-1">
+                            {Object.entries(module.adjacency).map(([id, value]) => (
+                              <div key={`${module.id}-${id}`} className="flex justify-between">
+                                <span>{techModuleMap.get(id)?.name ?? id}</span>
+                                <span>{value}</span>
+                              </div>
+                            ))}
+                          </dd>
+                        </div>
+                      </dl>
+                    ) : null}
                   </div>
-                  {module ? (
-                    <dl className="space-y-1 text-[11px] text-slate-400">
-                      <div className="flex justify-between">
-                        <dt>Base</dt>
-                        <dd>{module.baseValue}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[10px] uppercase tracking-wide text-slate-500">Adjacency boosts</dt>
-                        <dd className="mt-1 space-y-1">
-                          {Object.entries(module.adjacency).map(([id, value]) => (
-                            <div key={`${module.id}-${id}`} className="flex justify-between">
-                              <span>{techModuleMap.get(id)?.name ?? id}</span>
-                              <span>{value}</span>
-                            </div>
-                          ))}
-                        </dd>
-                      </div>
-                    </dl>
-                  ) : null}
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
           </div>
         </div>
         <aside className="flex flex-col gap-4">

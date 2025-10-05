@@ -84,6 +84,7 @@ interface AppState {
   placeModule: (index: number, moduleId: string | null) => void
   pushBenchModule: (moduleId: string) => void
   removeBenchModule: (moduleId: string) => void
+  clearPlannerModules: () => void
   suggestPlanner: () => void
   importPlanner: (planner: PlannerState) => void
   resetPlanner: () => void
@@ -92,6 +93,7 @@ interface AppState {
   importHints: (hints: HintEntry[]) => void
   addPortalEntry: (entry: PortalEntry) => void
   importPortals: (entries: PortalEntry[]) => void
+  removePortalEntry: (id: string) => void
   setNotes: (notes: NoteEntry[]) => void
   upsertNote: (note: NoteEntry) => void
   removeNotes: (ids: string[]) => void
@@ -207,6 +209,13 @@ export const useAppStore = create<AppState>((set) => ({
       withPersist('planner', planner)
       return { planner }
     }),
+  clearPlannerModules: () =>
+    set((state) => {
+      const slots = state.planner.grid.slots.map((slot) => ({ ...slot, moduleId: undefined }))
+      const planner = { ...state.planner, grid: { ...state.planner.grid, slots } }
+      withPersist('planner', planner)
+      return { planner }
+    }),
   suggestPlanner: () =>
     set((state) => {
       const suggested = suggestBestArrangement(state.planner, state.techModuleMap)
@@ -256,6 +265,12 @@ export const useAppStore = create<AppState>((set) => ({
     set(() => {
       withPersist('portals', entries)
       return { portalCustom: entries }
+    }),
+  removePortalEntry: (id) =>
+    set((state) => {
+      const portalCustom = state.portalCustom.filter((entry) => entry.id !== id)
+      withPersist('portals', portalCustom)
+      return { portalCustom }
     }),
   setNotes: (notes) =>
     set(() => {
