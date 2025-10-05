@@ -21,5 +21,6 @@ describe('portal glyph utilities', () => {
     expect(labels[0]).toContain('Glyph 1')
     const description = describePortal('10A200840C2B')
     expect(description.glyphs.split(' ')).toHaveLength(12)
+    expect(description.images).toHaveLength(12)
   })
 })

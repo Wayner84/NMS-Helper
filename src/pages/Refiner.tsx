@@ -1,9 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { DragEvent, ReactElement } from 'react'
 import { useAppStore } from '../store/useAppStore'
-import { computeValuePerHour, matchRefinerRecipe, suggestRefinerChains } from '../lib/refiner'
+import { computeValuePerHour, matchRefinerRecipe } from '../lib/refiner'
 import type { RefinerSlotState } from '../lib/refiner'
-import type { RefinerRecipe } from '../types'
+import type { Item, RefinerRecipe } from '../types'
 import { clsx } from 'clsx'
 
 const formatTime = (seconds: number): string => {
@@ -11,6 +11,106 @@ const formatTime = (seconds: number): string => {
   const minutes = Math.floor(seconds / 60)
   const remainder = seconds % 60
   return remainder ? `${minutes}m ${remainder}s` : `${minutes}m`
+}
+
+interface RefinerTreeNode {
+  itemId: string
+  itemName: string
+  desiredQuantity: number
+  actualQuantity: number
+  runs: number
+  timeSeconds: number
+  recipe?: RefinerRecipe
+  children: RefinerTreeNode[]
+}
+
+const getItemName = (items: Map<string, Item>, itemId: string): string =>
+  items.get(itemId)?.name ?? itemId
+
+const buildNodeFromRecipe = (
+  recipe: RefinerRecipe,
+  desiredQty: number,
+  recipesByOutput: Map<string, RefinerRecipe[]>,
+  items: Map<string, Item>,
+  visited: Set<string>
+): RefinerTreeNode => {
+  const runs = Math.max(1, Math.ceil(desiredQty / recipe.output.qty))
+  const actualQuantity = runs * recipe.output.qty
+  const nextVisited = new Set(visited)
+  nextVisited.add(recipe.output.item)
+
+  const children = recipe.inputs.map((input) =>
+    buildNodeForItem(input.item, input.qty * runs, recipesByOutput, items, nextVisited)
+  )
+
+  return {
+    itemId: recipe.output.item,
+    itemName: getItemName(items, recipe.output.item),
+    desiredQuantity: desiredQty,
+    actualQuantity,
+    runs,
+    timeSeconds: recipe.timeSeconds * runs,
+    recipe,
+    children
+  }
+}
+
+const buildNodeForItem = (
+  itemId: string,
+  quantity: number,
+  recipesByOutput: Map<string, RefinerRecipe[]>,
+  items: Map<string, Item>,
+  visited: Set<string>
+): RefinerTreeNode => {
+  if (visited.has(itemId)) {
+    return {
+      itemId,
+      itemName: getItemName(items, itemId),
+      desiredQuantity: quantity,
+      actualQuantity: quantity,
+      runs: 0,
+      timeSeconds: 0,
+      children: []
+    }
+  }
+
+  const options = recipesByOutput.get(itemId)
+  if (!options || options.length === 0) {
+    return {
+      itemId,
+      itemName: getItemName(items, itemId),
+      desiredQuantity: quantity,
+      actualQuantity: quantity,
+      runs: 0,
+      timeSeconds: 0,
+      children: []
+    }
+  }
+
+  const nextVisited = new Set(visited)
+  nextVisited.add(itemId)
+  return buildNodeFromRecipe(options[0], quantity, recipesByOutput, items, nextVisited)
+}
+
+const createRefinerTree = (
+  recipe: RefinerRecipe,
+  desiredQty: number,
+  recipesByOutput: Map<string, RefinerRecipe[]>,
+  items: Map<string, Item>
+): RefinerTreeNode => buildNodeFromRecipe(recipe, desiredQty, recipesByOutput, items, new Set())
+
+const collectBaseMaterials = (
+  node: RefinerTreeNode,
+  acc: Map<string, { itemId: string; itemName: string; qty: number }>
+): void => {
+  if (!node.recipe || node.children.length === 0) {
+    const existing = acc.get(node.itemId)
+    const nextQty = (existing?.qty ?? 0) + node.actualQuantity
+    acc.set(node.itemId, { itemId: node.itemId, itemName: node.itemName, qty: nextQty })
+    return
+  }
+
+  node.children.forEach((child) => collectBaseMaterials(child, acc))
 }
 
 const RefinerSlot = ({
@@ -128,20 +228,110 @@ const Refiner = (): ReactElement => {
 
   const sortedItems = useMemo(() => [...items].sort((a, b) => a.name.localeCompare(b.name)), [items])
 
+  const recipesByOutput = useMemo(() => {
+    const map = new Map<string, RefinerRecipe[]>()
+    refinerRecipes.forEach((recipe) => {
+      const existing = map.get(recipe.output.item)
+      if (existing) {
+        existing.push(recipe)
+      } else {
+        map.set(recipe.output.item, [recipe])
+      }
+    })
+    map.forEach((entries) =>
+      entries.sort((a, b) => {
+        if (a.timeSeconds !== b.timeSeconds) return a.timeSeconds - b.timeSeconds
+        if (a.inputs.length !== b.inputs.length) return a.inputs.length - b.inputs.length
+        return (a.name ?? a.output.item).localeCompare(b.name ?? b.output.item)
+      })
+    )
+    return map
+  }, [refinerRecipes])
+
   const [recipeSearch, setRecipeSearch] = useState('')
+  const [selectedRecipeId, setSelectedRecipeId] = useState<string | null>(null)
+  const [desiredOutputQty, setDesiredOutputQty] = useState(1)
 
   const currentRecipe = useMemo<RefinerRecipe | undefined>(
     () => matchRefinerRecipe(refinerSlots, refinerRecipes),
     [refinerSlots, refinerRecipes]
   )
 
-  const outputItem = currentRecipe ? itemsMap.get(currentRecipe.output.item) : undefined
-  const valuePerHour = currentRecipe ? computeValuePerHour(currentRecipe, itemsMap) : 0
-
-  const chainSuggestions = useMemo(
-    () => suggestRefinerChains(refinerSlots, refinerRecipes, itemsMap),
-    [refinerSlots, refinerRecipes, itemsMap]
+  const selectedRecipe = useMemo(
+    () => (selectedRecipeId ? refinerRecipes.find((recipe) => recipe.id === selectedRecipeId) : undefined),
+    [selectedRecipeId, refinerRecipes]
   )
+
+  const activeRecipe = selectedRecipe ?? currentRecipe
+  const activeOutputItem = activeRecipe ? itemsMap.get(activeRecipe.output.item) : undefined
+  const runsRequired = activeRecipe ? Math.max(1, Math.ceil(desiredOutputQty / activeRecipe.output.qty)) : 0
+  const actualOutputQty = activeRecipe ? runsRequired * activeRecipe.output.qty : 0
+  const totalTimeSeconds = activeRecipe ? activeRecipe.timeSeconds * runsRequired : 0
+  const valuePerHour = activeRecipe ? computeValuePerHour(activeRecipe, itemsMap) : 0
+
+  const recipeTree = useMemo(
+    () =>
+      activeRecipe
+        ? createRefinerTree(activeRecipe, desiredOutputQty, recipesByOutput, itemsMap)
+        : null,
+    [activeRecipe, desiredOutputQty, recipesByOutput, itemsMap]
+  )
+
+  const baseMaterials = useMemo(() => {
+    if (!recipeTree) return []
+    const map = new Map<string, { itemId: string; itemName: string; qty: number }>()
+    recipeTree.children.forEach((child) => collectBaseMaterials(child, map))
+    return Array.from(map.values()).sort((a, b) => a.itemName.localeCompare(b.itemName))
+  }, [recipeTree])
+
+  useEffect(() => {
+    if (!selectedRecipeId && currentRecipe) {
+      setDesiredOutputQty((prev) => (prev === 1 ? currentRecipe.output.qty : prev))
+    }
+  }, [selectedRecipeId, currentRecipe])
+
+  const renderTree = (node: RefinerTreeNode, depth = 0): ReactElement => {
+    const key = node.recipe ? `recipe-${node.recipe.id}-${depth}` : `base-${node.itemId}-${depth}`
+    if (!node.recipe || node.children.length === 0) {
+      return (
+        <li
+          key={key}
+          className="rounded border border-slate-700 bg-surface/60 p-3 text-sm text-slate-200"
+        >
+          <div className="flex items-center justify-between gap-3">
+            <span className="font-medium">{node.itemName}</span>
+            <span className="text-xs text-slate-400">
+              Qty {node.actualQuantity.toLocaleString()}
+            </span>
+          </div>
+        </li>
+      )
+    }
+
+    const showOverrun = node.actualQuantity > node.desiredQuantity
+
+    return (
+      <li key={key} className="rounded border border-slate-700 bg-surface/60 p-3 text-sm text-slate-200">
+        <details open className="space-y-3">
+          <summary className="cursor-pointer text-sm font-semibold text-slate-200">
+            {node.recipe.name} → {node.itemName} × {node.actualQuantity.toLocaleString()}
+          </summary>
+          <div className="grid gap-2 text-xs text-slate-300 sm:grid-cols-3">
+            <span>Runs: {node.runs.toLocaleString()}</span>
+            {showOverrun ? (
+              <span>Target: {node.desiredQuantity.toLocaleString()}</span>
+            ) : null}
+            {node.timeSeconds > 0 ? <span>Time: {formatTime(node.timeSeconds)}</span> : null}
+          </div>
+          {node.children.length > 0 ? (
+            <ul className="space-y-2 pl-3">
+              {node.children.map((child) => renderTree(child, depth + 1))}
+            </ul>
+          ) : null}
+        </details>
+      </li>
+    )
+  }
 
   const recipeMatches = useMemo(() => {
     const query = recipeSearch.trim().toLowerCase()
@@ -169,6 +359,165 @@ const Refiner = (): ReactElement => {
     <div className="flex flex-col gap-6">
       <section className="rounded-xl border border-slate-700 bg-surface/70 p-6">
         <div className="flex flex-col gap-4">
+          <div>
+            <h2 className="text-lg font-semibold text-slate-100">Find a recipe</h2>
+            <p className="mt-1 text-sm text-slate-400">
+              Pick an output item to see the required materials and refining steps.
+            </p>
+          </div>
+          <label className="flex flex-col gap-2 text-sm">
+            <span className="text-xs uppercase tracking-wide text-slate-500">Output item</span>
+            <input
+              type="search"
+              value={recipeSearch}
+              onChange={(event) => setRecipeSearch(event.target.value)}
+              placeholder="e.g. Chromatic Metal"
+              className="w-full rounded border border-slate-600 bg-surface/80 px-3 py-2"
+            />
+          </label>
+          {hasRecipeQuery ? (
+            recipeMatches.length > 0 ? (
+              <ul className="mt-2 space-y-2 text-sm">
+                {recipeMatches.map(({ recipe, outputName }) => {
+                  const isActive = activeRecipe?.id === recipe.id
+                  return (
+                    <li key={recipe.id}>
+                      <button
+                        type="button"
+                        className={clsx(
+                          'w-full rounded border px-3 py-3 text-left transition',
+                          isActive
+                            ? 'border-primary bg-primary/10 text-primary'
+                            : 'border-slate-700 bg-surface/60 text-slate-200 hover:border-primary hover:text-primary'
+                        )}
+                        onClick={() => {
+                          loadRefinerRecipe(recipe.id)
+                          setSelectedRecipeId(recipe.id)
+                          setDesiredOutputQty(recipe.output.qty)
+                          setRecipeSearch('')
+                        }}
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="font-semibold">{outputName}</span>
+                          <span className="text-xs text-slate-400">Plan recipe</span>
+                        </div>
+                        <div className="mt-1 text-xs text-slate-400">
+                          {recipe.inputs
+                            .map((input) => {
+                              const name = itemsMap.get(input.item)?.name ?? input.item
+                              return `${input.qty} × ${name}`
+                            })
+                            .join(' + ')}
+                        </div>
+                      </button>
+                    </li>
+                  )
+                })}
+              </ul>
+            ) : (
+              <p className="text-sm text-slate-400">No recipes match that search. Try a different item name.</p>
+            )
+          ) : (
+            <p className="text-sm text-slate-400">
+              Search for an output or fill the refiner slots below to match a recipe.
+            </p>
+          )}
+
+          {activeRecipe && activeOutputItem ? (
+            <div className="space-y-4">
+              <div className="rounded border border-slate-700 bg-surface/60 p-4">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <h3 className="text-base font-semibold text-slate-100">Plan output</h3>
+                    <p className="text-xs text-slate-400">Adjust the quantity to calculate materials.</p>
+                  </div>
+                  <label className="flex flex-col gap-1 text-sm sm:w-48">
+                    <span className="text-xs uppercase tracking-wide text-slate-500">Desired quantity</span>
+                    <input
+                      type="number"
+                      min={1}
+                      className="rounded border border-slate-600 bg-surface/80 px-3 py-2"
+                      value={desiredOutputQty}
+                      onChange={(event) =>
+                        setDesiredOutputQty(Math.max(1, Math.round(Number(event.target.value) || 1)))
+                      }
+                    />
+                  </label>
+                </div>
+                <dl className="mt-4 grid gap-3 text-sm text-slate-300 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="rounded border border-slate-700 bg-surface/50 px-3 py-2">
+                    <dt className="text-xs uppercase tracking-wide text-slate-500">Output</dt>
+                    <dd className="mt-1 text-base font-semibold text-slate-100">
+                      {activeOutputItem.name} × {actualOutputQty.toLocaleString()}
+                    </dd>
+                    {actualOutputQty !== desiredOutputQty ? (
+                      <p className="mt-1 text-[11px] text-slate-400">
+                        Target {desiredOutputQty.toLocaleString()} crafted
+                      </p>
+                    ) : null}
+                  </div>
+                  <div className="rounded border border-slate-700 bg-surface/50 px-3 py-2">
+                    <dt className="text-xs uppercase tracking-wide text-slate-500">Runs required</dt>
+                    <dd className="mt-1 text-base font-semibold text-slate-100">
+                      {runsRequired.toLocaleString()}
+                    </dd>
+                  </div>
+                  <div className="rounded border border-slate-700 bg-surface/50 px-3 py-2">
+                    <dt className="text-xs uppercase tracking-wide text-slate-500">Total time</dt>
+                    <dd className="mt-1 text-base font-semibold text-slate-100">
+                      {totalTimeSeconds > 0 ? formatTime(totalTimeSeconds) : 'Instant'}
+                    </dd>
+                  </div>
+                  <div className="rounded border border-slate-700 bg-surface/50 px-3 py-2">
+                    <dt className="text-xs uppercase tracking-wide text-slate-500">Value / hour</dt>
+                    <dd className="mt-1 text-base font-semibold text-slate-100">
+                      {valuePerHour.toLocaleString()} units
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div className="grid gap-4 lg:grid-cols-2">
+                <div className="rounded border border-slate-700 bg-surface/60 p-4">
+                  <h3 className="text-base font-semibold text-slate-100">Base materials</h3>
+                  {baseMaterials.length > 0 ? (
+                    <ul className="mt-3 space-y-2 text-sm text-slate-200">
+                      {baseMaterials.map((entry) => (
+                        <li
+                          key={`base-${entry.itemId}`}
+                          className="flex items-center justify-between rounded border border-slate-700 bg-surface/40 px-3 py-2"
+                        >
+                          <span className="font-medium">{entry.itemName}</span>
+                          <span className="text-xs text-slate-400">
+                            Qty {entry.qty.toLocaleString()}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-2 text-sm text-slate-400">No raw materials required for this recipe.</p>
+                  )}
+                </div>
+                <div className="rounded border border-slate-700 bg-surface/60 p-4">
+                  <h3 className="text-base font-semibold text-slate-100">Crafter components</h3>
+                  {recipeTree ? (
+                    <ul className="mt-3 space-y-3 text-sm text-slate-200">{renderTree(recipeTree)}</ul>
+                  ) : (
+                    <p className="mt-2 text-sm text-slate-400">Select a recipe to view the refining steps.</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm text-slate-400">
+              Load a recipe to view its material breakdown, or adjust the inputs below.
+            </p>
+          )}
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-slate-700 bg-surface/70 p-6">
+        <div className="flex flex-col gap-4">
           <div className="flex flex-wrap gap-4">
             {refinerSlots.map((slot, index) => (
               <RefinerSlot
@@ -182,134 +531,22 @@ const Refiner = (): ReactElement => {
               />
             ))}
           </div>
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:items-center sm:justify-between">
             <button
               type="button"
-              onClick={clearRefinerSlots}
+              onClick={() => {
+                clearRefinerSlots()
+                setSelectedRecipeId(null)
+                setDesiredOutputQty(1)
+              }}
               className="rounded-full border border-slate-600 px-4 py-2 text-sm text-slate-300 hover:border-primary"
             >
               Clear slots
             </button>
-            <div className="text-right text-sm text-slate-400">
-              Drag inputs or use swap buttons to reorder. Keyboard users can Tab to a slot and press Swap buttons.
+            <div className="text-sm text-slate-400 sm:text-right">
+              Drag inputs or use swap buttons to reorder. Keyboard users can Tab to a slot and activate the swap controls.
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="rounded-xl border border-slate-700 bg-surface/70 p-6">
-        <div className="flex flex-col gap-4">
-          <div>
-            <h2 className="text-lg font-semibold text-slate-100">Find a recipe</h2>
-            <p className="mt-1 text-sm text-slate-400">
-              Search for an output item to autofill the refiner inputs.
-            </p>
-          </div>
-          <label className="flex flex-col gap-2 text-sm">
-            <span className="text-xs uppercase tracking-wide text-slate-500">Output item</span>
-            <input
-              type="search"
-              value={recipeSearch}
-              onChange={(event) => setRecipeSearch(event.target.value)}
-              placeholder="e.g. Living Glass"
-              className="w-full rounded border border-slate-600 bg-surface/80 px-3 py-2"
-            />
-          </label>
-          {hasRecipeQuery ? (
-            recipeMatches.length > 0 ? (
-              <ul className="mt-2 space-y-2 text-sm">
-                {recipeMatches.map(({ recipe, outputName }) => (
-                  <li key={recipe.id}>
-                    <button
-                      type="button"
-                      className="w-full rounded border border-slate-700 bg-surface/60 px-3 py-3 text-left text-slate-200 transition hover:border-primary hover:text-primary"
-                      onClick={() => {
-                        loadRefinerRecipe(recipe.id)
-                        setRecipeSearch('')
-                      }}
-                    >
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <span className="font-semibold">{outputName}</span>
-                        <span className="text-xs text-slate-400">Fill slots</span>
-                      </div>
-                      <div className="mt-1 text-xs text-slate-400">
-                        {recipe.inputs
-                          .map((input) => {
-                            const name = itemsMap.get(input.item)?.name ?? input.item
-                            return `${input.qty} × ${name}`
-                          })
-                          .join(' + ')}
-                      </div>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-slate-400">No recipes match that search. Try a different item name.</p>
-            )
-          ) : (
-            <p className="text-sm text-slate-400">Start typing to see available refining outputs.</p>
-          )}
-        </div>
-      </section>
-
-      <section className="grid gap-4 md:grid-cols-[1.5fr_1fr]">
-        <div className="rounded-xl border border-slate-700 bg-surface/70 p-6">
-          <h2 className="text-lg font-semibold text-slate-100">Result</h2>
-          {currentRecipe && outputItem ? (
-            <dl className="mt-4 grid gap-3 text-sm text-slate-300">
-              <div className="flex items-center justify-between rounded border border-slate-700 bg-surface/60 px-3 py-2">
-                <dt className="font-medium">Output</dt>
-                <dd>
-                  {outputItem.name} × {currentRecipe.output.qty}
-                </dd>
-              </div>
-              <div className="flex items-center justify-between rounded border border-slate-700 bg-surface/60 px-3 py-2">
-                <dt className="font-medium">Time</dt>
-                <dd>{formatTime(currentRecipe.timeSeconds)}</dd>
-              </div>
-              <div className="flex items-center justify-between rounded border border-slate-700 bg-surface/60 px-3 py-2">
-                <dt className="font-medium">Estimated value/hour</dt>
-                <dd>{valuePerHour.toLocaleString()} units</dd>
-              </div>
-            </dl>
-          ) : (
-            <p className="mt-4 text-sm text-slate-400">
-              Select 1–3 inputs to see matching recipes. The calculator recognises exact ingredient sets and quantities.
-            </p>
-          )}
-        </div>
-        <div className="rounded-xl border border-slate-700 bg-surface/70 p-6">
-          <h3 className="text-lg font-semibold text-slate-100">Chain suggestions</h3>
-          {chainSuggestions.length === 0 ? (
-            <p className="mt-2 text-sm text-slate-400">
-              Add inputs to preview multi-step refining chains that unlock higher value outputs within three steps.
-            </p>
-          ) : (
-            <ul className="mt-4 space-y-3 text-sm text-slate-300">
-              {chainSuggestions.map((chain, index) => (
-                <li key={`chain-${index}`} className="rounded border border-slate-700 bg-surface/60 p-3">
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs uppercase tracking-wide text-slate-500">
-                    <span>{chain.steps.length} step chain</span>
-                    <span>{Math.round(chain.valuePerHour).toLocaleString()} units/hr</span>
-                  </div>
-                  <ol className="mt-2 space-y-1">
-                    {chain.steps.map((step, stepIndex) => (
-                      <li key={step.id} className="flex items-center justify-between gap-3 rounded bg-surface/70 px-3 py-2 text-xs">
-                        <span className="font-medium text-slate-200">
-                          {stepIndex + 1}. {step.name}
-                        </span>
-                        <span className="text-slate-400">→ {itemsMap.get(step.output.item)?.name ?? step.output.item}</span>
-                      </li>
-                    ))}
-                  </ol>
-                  <div className="mt-2 text-xs text-slate-400">
-                    Total time {formatTime(chain.totalTime)} · Output value {chain.totalValue.toLocaleString()} units
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       </section>
     </div>
