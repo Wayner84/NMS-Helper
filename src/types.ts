@@ -10,6 +10,22 @@ export interface RecipeInput {
   qty: number
 }
 
+export interface CanonicalRecipeInput extends RecipeInput {}
+
+export interface CanonicalRecipe {
+  id: string
+  name?: string
+  output: string
+  quantity: number
+  refiner: 'Portable' | 'Medium' | 'Large'
+  time_s: number
+  inputs: CanonicalRecipeInput[]
+  tags?: string[]
+  locked?: boolean
+}
+
+export type ItemCategoryMap = Record<string, string>
+
 export interface RefinerRecipe {
   id: string
   name: string

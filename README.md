@@ -12,6 +12,11 @@ A fully static, offline-ready helper for **No Man's Sky** designed for GitHub Pa
 - **Hints** – curated gameplay tips with tag filters, local editing, import/export, and validation.
 - **Notes** – hierarchical systems/planets/bases tracker with resource chips, bulk tagging, quick-pick resources, and JSON import/export.
 
+### Refiner Planner Modes
+
+- **Strict Mode (default)** – uses the locked canonical refiner recipes without expanding intermediate materials. Plans surface a single step with the scaled canonical inputs.
+- **Synthesis Mode** – opt-in depth-limited expansions (≤ 2) that only traverse categories already present in the target recipe. The UI annotates each step with its depth and synthesis justification.
+
 ## Tech Stack
 
 - [Vite](https://vitejs.dev/) + [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
@@ -49,6 +54,9 @@ Seed data lives in [`src/data/`](src/data):
 
 - `items.json` – base items with `id`, `name`, `group`, `value`.
 - `refiner.json` – `inputs[]`, `output`, and `timeSeconds`.
+- `recipes_canonical.json` – locked canonical refiner dataset powering Strict/Synthesis modes.
+- `item_categories.json` – item id → category map used for synthesis guards.
+- `overrides.json` – runtime patches or replacements for canonical recipes.
 - `crafting.json` – nested component tree; components can reference other recipes via `viaRecipe`.
 - `cooking.json` – inputs ➜ output with method flags (`heated`, `refined`, `mixed`).
 - `tech.json` – module metadata, adjacency weights, and supercharge multipliers.

@@ -1,6 +1,9 @@
 import { create } from 'zustand'
 import itemsJson from '../data/items.json'
 import refinerJson from '../data/refiner.json'
+import canonicalJson from '../data/recipes_canonical.json'
+import itemCategoriesJson from '../data/item_categories.json'
+import overridesJson from '../data/overrides.json'
 import craftingJson from '../data/crafting.json'
 import cookingJson from '../data/cooking.json'
 import techJson from '../data/tech.json'
@@ -8,10 +11,12 @@ import portalsJson from '../data/portals.json'
 import hintsJson from '../data/hints.json'
 import resourcesJson from '../data/resources.json'
 import {
+  CanonicalRecipe,
   CraftingRecipe,
   CookingRecipe,
   HintEntry,
   Item,
+  ItemCategoryMap,
   NoteEntry,
   PlannerSlot,
   PlannerState,
@@ -24,8 +29,62 @@ import { createEmptyPlanner, resizePlannerGrid, suggestBestArrangement } from '.
 import { RefinerSlotState } from '../lib/refiner'
 import { clearPersisted, loadPersisted, savePersisted } from '../lib/persistence'
 import { nanoid } from 'nanoid'
+import { clearPlannerCache } from '../lib/refinerPlanner'
 
 export type TabId = 'refiner' | 'crafting' | 'cooking' | 'planner' | 'portals' | 'hints' | 'notes'
+
+interface RecipeOverrideEntry {
+  id: string
+  replace?: CanonicalRecipe
+  patch?: Partial<CanonicalRecipe>
+}
+
+interface OverridesDataset {
+  recipes?: RecipeOverrideEntry[]
+}
+
+const cloneCanonicalRecipe = (recipe: CanonicalRecipe): CanonicalRecipe => ({
+  ...recipe,
+  inputs: recipe.inputs.map((input) => ({ ...input })),
+  tags: recipe.tags ? [...recipe.tags] : undefined
+})
+
+const applyRecipeOverrides = (
+  seed: CanonicalRecipe[],
+  overrides: OverridesDataset
+): CanonicalRecipe[] => {
+  const map = new Map<string, CanonicalRecipe>()
+  seed.forEach((recipe) => {
+    map.set(recipe.id, cloneCanonicalRecipe(recipe))
+  })
+
+  overrides.recipes?.forEach((entry) => {
+    if (entry.replace) {
+      map.set(entry.id, cloneCanonicalRecipe({ ...entry.replace, id: entry.id }))
+      return
+    }
+    const existing = map.get(entry.id)
+    if (!existing || !entry.patch) return
+    const next: CanonicalRecipe = {
+      ...existing,
+      ...entry.patch
+    }
+    next.inputs = (entry.patch.inputs ?? existing.inputs).map((input) => ({ ...input }))
+    if (entry.patch.tags) {
+      next.tags = entry.patch.tags ? [...entry.patch.tags] : undefined
+    } else if (existing.tags) {
+      next.tags = [...existing.tags]
+    }
+    map.set(entry.id, next)
+  })
+
+  return Array.from(map.values())
+}
+
+const canonicalSeed = (canonicalJson as CanonicalRecipe[]).map(cloneCanonicalRecipe)
+const overridesData = overridesJson as OverridesDataset
+const canonicalRecipesInitial = applyRecipeOverrides(canonicalSeed, overridesData)
+const itemCategories = itemCategoriesJson as ItemCategoryMap
 
 const items = itemsJson as Item[]
 const refinerRecipes = refinerJson as RefinerRecipe[]
@@ -57,6 +116,8 @@ interface AppState {
   activeTab: TabId
   items: Item[]
   itemsMap: Map<string, Item>
+  canonicalRecipes: CanonicalRecipe[]
+  itemCategories: ItemCategoryMap
   refinerRecipes: RefinerRecipe[]
   craftingRecipes: CraftingRecipe[]
   cookingRecipes: CookingRecipe[]
@@ -70,6 +131,8 @@ interface AppState {
   planner: PlannerState
   refinerSlots: RefinerSlotState[]
   resources: typeof resourceDataset
+  applyCanonicalRecipePatch: (id: string, patch: Partial<CanonicalRecipe>) => void
+  reloadCanonicalRecipes: () => void
   setTab: (tab: TabId) => void
   setTheme: (theme: 'dark' | 'light') => void
   toggleTheme: () => void
@@ -111,6 +174,8 @@ export const useAppStore = create<AppState>((set) => ({
   activeTab: 'refiner',
   items,
   itemsMap: itemMap,
+  canonicalRecipes: canonicalRecipesInitial,
+  itemCategories,
   refinerRecipes,
   craftingRecipes,
   cookingRecipes,
@@ -124,6 +189,33 @@ export const useAppStore = create<AppState>((set) => ({
   planner: defaultPlannerState,
   refinerSlots: defaultRefinerSlots,
   resources: resourceDataset,
+  applyCanonicalRecipePatch: (id, patch) =>
+    set((state) => {
+      const index = state.canonicalRecipes.findIndex((recipe) => recipe.id === id)
+      if (index === -1) return {}
+      const next = state.canonicalRecipes.map((recipe, idx) => {
+        if (idx !== index) return recipe
+        const updated: CanonicalRecipe = {
+          ...recipe,
+          ...patch
+        }
+        updated.inputs = (patch.inputs ?? recipe.inputs).map((input) => ({ ...input }))
+        if (patch.tags) {
+          updated.tags = patch.tags ? [...patch.tags] : undefined
+        } else if (recipe.tags) {
+          updated.tags = [...recipe.tags]
+        }
+        return updated
+      })
+      clearPlannerCache()
+      return { canonicalRecipes: next }
+    }),
+  reloadCanonicalRecipes: () =>
+    set(() => {
+      const refreshed = applyRecipeOverrides(canonicalSeed, overridesData)
+      clearPlannerCache()
+      return { canonicalRecipes: refreshed }
+    }),
   setTab: (tab) => set({ activeTab: tab }),
   setTheme: (theme) => set({ theme }),
   toggleTheme: () => set((state) => ({ theme: state.theme === 'dark' ? 'light' : 'dark' })),
@@ -151,7 +243,7 @@ export const useAppStore = create<AppState>((set) => ({
   clearRefinerSlots: () => set({ refinerSlots: defaultRefinerSlots.map((slot) => ({ ...slot })) }),
   loadRefinerRecipe: (recipeId) =>
     set((state) => {
-      const recipe = state.refinerRecipes.find((entry) => entry.id === recipeId)
+      const recipe = state.canonicalRecipes.find((entry) => entry.id === recipeId)
       if (!recipe) return {}
 
       const slots = state.refinerSlots.map(() => ({ itemId: null as string | null, qty: 1 }))
