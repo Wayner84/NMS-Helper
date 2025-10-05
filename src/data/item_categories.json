@@ -1,0 +1,10 @@
+{
+  "cadmium": "Metal",
+  "chromatic_metal": "Metal",
+  "copper": "Metal",
+  "ferrite_dust": "Mineral",
+  "pure_ferrite": "Mineral",
+  "rusted_metal": "Salvage",
+  "metal_plating": "Product",
+  "nitrogen": "Gas"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cadmium_double_refine",
+    "name": "Cadmium (Stabilised)",
+    "output": "cadmium",
+    "quantity": 1,
+    "refiner": "Medium",
+    "time_s": 22,
+    "inputs": [
+      { "item": "chromatic_metal", "qty": 1 },
+      { "item": "cadmium", "qty": 1 }
+    ],
+    "tags": ["canonical", "strict_only"],
+    "locked": true
+  },
+  {
+    "id": "chromatic_metal_from_copper",
+    "name": "Chromatic Metal (Copper)",
+    "output": "chromatic_metal",
+    "quantity": 2,
+    "refiner": "Medium",
+    "time_s": 30,
+    "inputs": [
+      { "item": "copper", "qty": 1 }
+    ],
+    "tags": ["canonical"],
+    "locked": true
+  },
+  {
+    "id": "pure_ferrite_from_ferrite_dust",
+    "name": "Pure Ferrite (Dust)",
+    "output": "pure_ferrite",
+    "quantity": 1,
+    "refiner": "Portable",
+    "time_s": 30,
+    "inputs": [
+      { "item": "ferrite_dust", "qty": 2 }
+    ],
+    "tags": ["canonical"],
+    "locked": true
+  },
+  {
+    "id": "pure_ferrite_from_rusted_metal",
+    "name": "Pure Ferrite (Rusted Metal)",
+    "output": "pure_ferrite",
+    "quantity": 2,
+    "refiner": "Portable",
+    "time_s": 45,
+    "inputs": [
+      { "item": "rusted_metal", "qty": 1 }
+    ],
+    "tags": ["canonical"],
+    "locked": true
+  },
+  {
+    "id": "metal_plating_from_ferrite",
+    "name": "Metal Plating",
+    "output": "metal_plating",
+    "quantity": 1,
+    "refiner": "Portable",
+    "time_s": 30,
+    "inputs": [
+      { "item": "pure_ferrite", "qty": 1 }
+    ],
+    "tags": ["canonical"],
+    "locked": true
+  }
+]
