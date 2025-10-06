@@ -1,7 +1,9 @@
+import { clsx } from 'clsx'
 import { useMemo, useState } from 'react'
+import { ResourceIcon } from '../components/ResourceIcon'
+import { getResourceIcon } from '../lib/resourceIcons'
 import { useAppStore } from '../store/useAppStore'
 import type { CraftingRecipe, Item } from '../types'
-import { clsx } from 'clsx'
 
 interface RequirementEntry {
   item: Item
@@ -102,6 +104,7 @@ const Crafting = (): JSX.Element => {
           const have = haveMap[component.item] ?? 0
           const need = Math.max(totalQty - have, 0)
           const value = (item?.value ?? 0) * totalQty
+          const icon = getResourceIcon({ id: component.item, name: label })
 
           return (
             <li
@@ -109,7 +112,10 @@ const Crafting = (): JSX.Element => {
               className="rounded border border-slate-700 bg-surface/60 p-3 text-sm text-slate-200"
             >
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <span className="font-medium">{label}</span>
+                <div className="flex items-center gap-3">
+                  <ResourceIcon iconSrc={icon} label={label} className="h-10 w-10" />
+                  <span className="font-medium">{label}</span>
+                </div>
                 <span className="text-xs text-slate-400">{value.toLocaleString()} units value</span>
               </div>
               <div className="mt-2 grid gap-2 text-xs text-slate-300 sm:grid-cols-3">
@@ -160,15 +166,19 @@ const Crafting = (): JSX.Element => {
                   {aggregateRequirements.map(({ item, required }) => {
                     const have = haveMap[item.id] ?? 0
                     const need = Math.max(required - have, 0)
+                    const icon = getResourceIcon(item)
                     return (
                       <div
                         key={`agg-${item.id}`}
                         className={clsx(
-                          'flex flex-col gap-1 rounded border border-slate-700 px-3 py-2 text-sm',
+                          'flex flex-col gap-2 rounded border border-slate-700 px-3 py-2 text-sm',
                           need > 0 ? 'bg-surface/60 text-slate-200' : 'bg-surface/40 text-slate-400'
                         )}
                       >
-                        <span className="font-medium">{item.name}</span>
+                        <div className="flex items-center gap-3">
+                          <ResourceIcon iconSrc={icon} label={item.name} className="h-10 w-10" />
+                          <span className="font-medium">{item.name}</span>
+                        </div>
                         <div className="flex items-center justify-between text-xs text-slate-400">
                           <span>Required {required}</span>
                           <span>Need {need}</span>

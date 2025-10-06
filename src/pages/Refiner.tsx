@@ -1,5 +1,7 @@
 import type { ReactElement } from 'react'
 import { useMemo, useState } from 'react'
+import { ResourceIcon } from '../components/ResourceIcon'
+import { getResourceIcon } from '../lib/resourceIcons'
 import { useAppStore } from '../store/useAppStore'
 import type { Item } from '../types'
 
@@ -16,52 +18,6 @@ interface DecoratedRecipe {
   output: DecoratedInput
   timeSeconds: number
   searchText: string
-}
-
-const resourceIconModules = import.meta.glob('../assets/resources/*.{png,jpg,jpeg,webp,svg}', {
-  eager: true,
-  import: 'default'
-}) as Record<string, string>
-
-const sanitizeKey = (value: string): string =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '_')
-    .replace(/^_+|_+$/g, '')
-
-const resourceIconMap = new Map<string, string>()
-
-Object.entries(resourceIconModules).forEach(([path, src]) => {
-  const fileName = path.split('/').pop() ?? ''
-  const baseName = fileName.replace(/\.[^/.]+$/, '')
-  const variations = new Set<string>([
-    baseName.toLowerCase(),
-    sanitizeKey(baseName),
-    sanitizeKey(baseName).replace(/_/g, '')
-  ])
-  variations.forEach((key) => {
-    if (key) {
-      resourceIconMap.set(key, src)
-    }
-  })
-})
-
-const getResourceIcon = (item: DecoratedInput): string | undefined => {
-  const candidates = [
-    item.id.toLowerCase(),
-    sanitizeKey(item.id),
-    sanitizeKey(item.id).replace(/_/g, ''),
-    sanitizeKey(item.name),
-    sanitizeKey(item.name).replace(/_/g, '')
-  ]
-  for (const key of candidates) {
-    if (!key) continue
-    const match = resourceIconMap.get(key)
-    if (match) {
-      return match
-    }
-  }
-  return undefined
 }
 
 const fallbackName = (itemId: string): string =>
@@ -86,18 +42,7 @@ const ItemCell = ({
 
   return (
     <div className="flex items-start gap-3">
-      {icon ? (
-        <img
-          src={icon}
-          alt={`${item.name} icon`}
-          loading="lazy"
-          className="h-12 w-12 shrink-0 rounded-full border border-slate-700 bg-surface/80 object-contain p-1 shadow-inner"
-        />
-      ) : (
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-700 bg-surface/60 text-xs uppercase tracking-wide text-slate-500">
-          {item.name.slice(0, 2).toUpperCase()}
-        </div>
-      )}
+      <ResourceIcon iconSrc={icon} label={item.name} />
       <div className="space-y-0.5">
         <p className={emphasize ? 'font-semibold text-primary' : 'font-medium text-slate-100'}>
           {item.name}
