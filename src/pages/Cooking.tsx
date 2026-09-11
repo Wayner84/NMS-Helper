@@ -2,12 +2,7 @@ import { useMemo, useState } from 'react'
 import { useAppStore } from '../store/useAppStore'
 import type { CookingRecipe } from '../types'
 import { clsx } from 'clsx'
-
-const methodLabels: Array<{ key: keyof CookingRecipe; label: string; color: string }> = [
-  { key: 'heated', label: 'Heated', color: 'bg-rose-500/20 text-rose-200' },
-  { key: 'refined', label: 'Refined', color: 'bg-sky-500/20 text-sky-200' },
-  { key: 'mixed', label: 'Mixed', color: 'bg-emerald-500/20 text-emerald-200' }
-]
+import { recipeMatchesQuery } from '../lib/cooking'
 
 const Cooking = (): JSX.Element => {
   const { cookingRecipes, itemsMap } = useAppStore((state) => ({
@@ -38,19 +33,11 @@ const Cooking = (): JSX.Element => {
   const [ingredientFilter, setIngredientFilter] = useState('')
   const [dishSearch, setDishSearch] = useState('')
   const [selectedIngredient, setSelectedIngredient] = useState<string | null>(null)
-  const [activeMethods, setActiveMethods] = useState<Array<keyof CookingRecipe>>([])
+
 
   const filteredIngredients = ingredientList.filter((ingredient) =>
     ingredient.name.toLowerCase().includes(ingredientFilter.toLowerCase())
   )
-
-  const toggleMethod = (method: keyof CookingRecipe) => {
-    setActiveMethods((methods) =>
-      methods.includes(method) ? methods.filter((item) => item !== method) : [...methods, method]
-    )
-  }
-
-  const hasActiveMethodFilters = activeMethods.length > 0
 
   const dishQuery = dishSearch.trim().toLowerCase()
 
@@ -60,28 +47,9 @@ const Cooking = (): JSX.Element => {
       : cookingRecipes
 
     return recipesForIngredient.filter((recipe) => {
-      const matchesMethod =
-        !hasActiveMethodFilters || activeMethods.some((method) => Boolean(recipe[method]))
-
-      if (!matchesMethod) {
-        return false
-      }
-
-      if (dishQuery === '') {
-        return true
-      }
-
-      const recipeName = recipe.name.toLowerCase()
-      if (recipeName.includes(dishQuery)) {
-        return true
-      }
-
-      return recipe.inputs.some((input) => {
-        const itemName = itemsMap.get(input.item)?.name.toLowerCase()
-        return itemName?.includes(dishQuery) ?? false
-      })
+      return recipeMatchesQuery(recipe, itemsMap, dishQuery)
     })
-  }, [activeMethods, cookingRecipes, dishQuery, hasActiveMethodFilters, ingredientIndex, itemsMap, selectedIngredient])
+  }, [cookingRecipes, dishQuery, ingredientIndex, itemsMap, selectedIngredient])
 
   const selectedIngredientInfo = selectedIngredient
     ? ingredientList.find((ingredient) => ingredient.id === selectedIngredient) ?? null
@@ -95,11 +63,9 @@ const Cooking = (): JSX.Element => {
     setSelectedIngredient(null)
     setDishSearch('')
     setIngredientFilter('')
-    setActiveMethods([])
   }
 
-  const hasActiveFilters =
-    selectedIngredient !== null || dishQuery !== '' || ingredientFilter.trim() !== '' || hasActiveMethodFilters
+  const hasActiveFilters = selectedIngredient !== null || dishQuery !== ''
 
   return (
     <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
@@ -161,7 +127,7 @@ const Cooking = (): JSX.Element => {
                 </span>
               </div>
               <p className="text-xs text-slate-400">
-                Browse by ingredient, narrow by cooking method, or search by dish name or ingredient.
+                Browse by ingredient, or search by dish name, operation, or ingredient.
               </p>
               {selectedIngredientInfo ? (
                 <div className="rounded-lg border border-slate-700 bg-surface/60 px-3 py-2 text-xs text-slate-300">
@@ -181,35 +147,11 @@ const Cooking = (): JSX.Element => {
                   onChange={(event) => setDishSearch(event.target.value)}
                 />
               </label>
-              <div className="flex flex-1 flex-col gap-2 text-xs">
-                <span className="uppercase tracking-wide text-slate-400">Cooking methods</span>
-                <div className="flex flex-wrap gap-2">
-                  {methodLabels.map((method) => {
-                    const isActive = activeMethods.includes(method.key)
-                    return (
-                      <button
-                        type="button"
-                        key={method.key}
-                        className={clsx(
-                          'rounded-full border px-3 py-1 text-xs font-semibold transition',
-                          isActive
-                            ? 'border-primary bg-primary/10 text-primary'
-                            : 'border-slate-700 bg-surface/60 text-slate-300 hover:bg-surface/80'
-                        )}
-                        onClick={() => toggleMethod(method.key)}
-                        aria-pressed={isActive}
-                      >
-                        {method.label}
-                      </button>
-                    )
-                  })}
-                </div>
-              </div>
             </div>
           </div>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
             {hasActiveFilters ? (
-              <span>Filters active. Showing the recipes that match all selections.</span>
+              <span>Filters active. Showing recipes that match the selected ingredient and search.</span>
             ) : (
               <span>Showing all recipes.</span>
             )}
@@ -226,7 +168,7 @@ const Cooking = (): JSX.Element => {
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             {displayedRecipes.length === 0 ? (
               <div className="col-span-full rounded-lg border border-dashed border-slate-700 bg-surface/50 p-6 text-center text-sm text-slate-400">
-                No dishes match the current filters. Try adjusting your ingredient, method, or search filters.
+                No dishes match the current filters. Try adjusting your ingredient or search.
               </div>
             ) : (
               <>
@@ -235,35 +177,24 @@ const Cooking = (): JSX.Element => {
                     key={recipe.id}
                     className="rounded-lg border border-slate-700 bg-surface/60 p-4 text-sm text-slate-200 shadow-inner"
                   >
-                    <header className="flex flex-wrap items-center justify-between gap-2">
-                      <h3 className="text-base font-semibold text-primary">{recipe.name}</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {methodLabels.map((method) =>
-                          recipe[method.key] ? (
-                            <span
-                              key={method.key}
-                              className={clsx('rounded-full px-2 py-1 text-xs font-semibold', method.color)}
-                            >
-                              {method.label}
-                            </span>
-                          ) : null
-                        )}
-                      </div>
+                    <header>
+                      <h3 className="text-base font-semibold text-primary">
+                        {itemsMap.get(recipe.output.item)?.name ?? recipe.output.item}
+                      </h3>
+                      <p className="mt-1 text-xs text-slate-400">{recipe.name}</p>
                     </header>
                     <div className="mt-3">
                       <h4 className="text-xs uppercase tracking-wide text-slate-400">Ingredients</h4>
                       <ul className="mt-2 space-y-1">
-                        {recipe.inputs.map((input) => (
-                          <li key={`${recipe.id}-${input.item}`} className="flex justify-between gap-3 text-xs text-slate-300">
+                        {recipe.inputs.map((input, index) => (
+                          <li key={`${recipe.id}-${input.item}-${index}`} className="flex justify-between gap-3 text-xs text-slate-300">
                             <span>{itemsMap.get(input.item)?.name ?? input.item}</span>
                             <span>× {input.qty}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <footer className="mt-4 text-xs text-slate-400">
-                      Output: {itemsMap.get(recipe.output.item)?.name ?? recipe.output.item} × {recipe.output.qty}
-                    </footer>
+                    <footer className="mt-4 text-xs text-slate-400">Output quantity: × {recipe.output.qty}</footer>
                   </article>
                 ))}
               </>

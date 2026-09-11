@@ -14,6 +14,7 @@ const hydrateStore = async () => {
     await useAppStore.getState().hydrate()
   } catch (error) {
     console.error('Failed to hydrate store', error)
+    useAppStore.setState({ ready: true })
   }
 }
 

@@ -4,18 +4,14 @@ A fully static, offline-ready helper for **No Man's Sky** designed for GitHub Pa
 
 ## Features
 
-- **Refiner** – three-slot refiner calculator with value/hour estimates and chain suggestions up to depth three.
+- **Refiner** – searchable current refining recipe reference with ingredient, output, quantity, and processing-time data.
 - **Crafting** – component tree viewer with have/need tracking, collapsible sub-recipes, and a copyable shopping list.
-- **Cooking** – ingredient ➜ dish explorer with heat/refine/mix flags and quick filtering.
-- **Planner** – tech layout editor with adjacency scoring, supercharged slot handling, greedy + stochastic optimisation, and IndexedDB persistence.
+- **Cooking** – ingredient ➜ dish explorer with current Nutrient Processor recipes and dish/ingredient search.
+- **Planner (experimental)** – manual tech layout editor with IndexedDB persistence. Automatic optimisation remains experimental until complete adjacency data is available.
 - **Portals** – centre-adjacent portal glyph directory with glyph visualisation, share/copy, filters, and local submission workflow.
 - **Hints** – curated gameplay tips with tag filters, local editing, import/export, and validation.
 - **Notes** – hierarchical systems/planets/bases tracker with resource chips, bulk tagging, quick-pick resources, and JSON import/export.
 
-### Refiner Planner Modes
-
-- **Strict Mode (default)** – uses the locked canonical refiner recipes without expanding intermediate materials. Plans surface a single step with the scaled canonical inputs.
-- **Synthesis Mode** – opt-in depth-limited expansions (≤ 2) that only traverse categories already present in the target recipe. The UI annotates each step with its depth and synthesis justification.
 
 ## Tech Stack
 
@@ -46,6 +42,7 @@ Vite serves the SPA at `http://localhost:5173/`. The Pages-ready base path is `/
 | `npm run test:watch` | Watch mode for unit tests |
 | `npm run test:e2e` | Execute Playwright e2e tests |
 | `npm run validate:data` | Validate JSON datasets |
+| `npm run sync:data` | Refresh refining, cooking, and source-backed metadata for app-referenced items |
 | `npm run lint` | Run ESLint (project uses recommended configs) |
 
 ## Data Schema
@@ -58,7 +55,8 @@ Seed data lives in [`src/data/`](src/data):
 - `item_categories.json` – item id → category map used for synthesis guards.
 - `overrides.json` – runtime patches or replacements for canonical recipes.
 - `crafting.json` – nested component tree; components can reference other recipes via `viaRecipe`.
-- `cooking.json` – inputs ➜ output with method flags (`heated`, `refined`, `mixed`).
+- `cooking.json` – Nutrient Processor inputs, operation, and output.
+- `data-meta.json` – current game version, generation time, and source revision.
 - `tech.json` – module metadata, adjacency weights, and supercharge multipliers.
 - `portals.json` – centre-adjacent addresses with tags, notes, and optional links.
 - `hints.json` – curated gameplay tips with optional attribution.

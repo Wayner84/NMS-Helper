@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef } from 'react'
 import type { KeyboardEvent, ReactNode } from 'react'
 import { clsx } from 'clsx'
 import { TabId, useAppStore } from './store/useAppStore'
+import dataMeta from './data/data-meta.json'
 
 const RefinerPage = lazy(() => import('./pages/Refiner'))
 const CraftingPage = lazy(() => import('./pages/Crafting'))
@@ -117,7 +118,7 @@ const App = (): JSX.Element => {
           ))}
         </nav>
       </header>
-      <main id="main" className="mx-auto flex max-w-6xl flex-1 flex-col px-4 pb-16 pt-6" role="presentation">
+      <main id="main" className="mx-auto flex max-w-6xl flex-1 flex-col px-4 pb-16 pt-6">
         {!ready ? (
           <TabFallback />
         ) : (
@@ -127,7 +128,12 @@ const App = (): JSX.Element => {
         )}
       </main>
       <footer className="border-t border-slate-800 bg-surface/80 py-6 text-center text-xs text-slate-500">
-        Community-sourced data. Verify portal addresses before travel. Works offline after first load.
+        Game data {dataMeta.gameVersion} · Reviewed through {dataMeta.reviewedThroughVersion} · Updated{' '}
+        {new Date(dataMeta.generatedAt).toLocaleDateString()} ·{' '}
+        <a className="underline hover:text-primary" href={dataMeta.source} target="_blank" rel="noreferrer">
+          Source {dataMeta.sourceCommit.slice(0, 7)}
+        </a>
+        . Verify portal addresses before travel.
       </footer>
     </div>
   )

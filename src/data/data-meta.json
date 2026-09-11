@@ -1,0 +1,9 @@
+{
+  "gameVersion": "7.00",
+  "reviewedThroughVersion": "7.01",
+  "sourceCompilerVersion": "7.00.0.1",
+  "sourceSchemaVersion": 1,
+  "generatedAt": "2026-09-11T23:10:05.054Z",
+  "source": "https://github.com/bradhave94/nms/tree/685bcbe37fbf1f5f32632587cf21563f2a9a8748/src/datav2",
+  "sourceCommit": "685bcbe37fbf1f5f32632587cf21563f2a9a8748"
+}
