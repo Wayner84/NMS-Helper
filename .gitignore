@@ -13,6 +13,8 @@ dist-ssr
 *.local
 test-results/
 *.tsbuildinfo
+vite.config.js
+vite.config.d.ts
 
 # Editor directories and files
 .vscode/*

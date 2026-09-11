@@ -24,7 +24,12 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - run: npm run validate:data
+      - run: npm test
+      - run: npm run lint
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
       - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:

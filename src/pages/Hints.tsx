@@ -122,7 +122,6 @@ const Hints = (): JSX.Element => {
   }
 
   const handleImport = () => {
-    // eslint-disable-next-line no-alert
     const value = window.prompt('Paste JSON array of hints to import')
     if (!value) return
     try {

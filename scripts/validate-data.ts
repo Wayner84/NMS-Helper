@@ -37,6 +37,26 @@ interface ValidationResult {
   errors: string[]
 }
 
+const validateUniqueIds = (label: string, entries: Array<{ id: string }>): ValidationResult => {
+  const seen = new Set<string>()
+  const errors: string[] = []
+  entries.forEach(({ id }) => {
+    if (seen.has(id)) errors.push(`${label} contains duplicate id ${id}`)
+    seen.add(id)
+  })
+  return { ok: errors.length === 0, errors }
+}
+
+const validateCurrentRecipeCoverage = (
+  refinerRecipes: RefinerRecipe[],
+  cookingRecipes: CookingRecipe[]
+): ValidationResult => {
+  const errors: string[] = []
+  if (refinerRecipes.length < 361) errors.push(`Expected at least 361 current refiner recipes`)
+  if (cookingRecipes.length < 1323) errors.push(`Expected at least 1323 current cooking recipes`)
+  return { ok: errors.length === 0, errors }
+}
+
 const validateRefiner = (recipes: RefinerRecipe[], items: Map<string, Item>): ValidationResult => {
   const errors: string[] = []
   recipes.forEach((recipe) => {
@@ -173,6 +193,14 @@ const hints = readJson<HintEntry[]>('hints.json')
 const resourcesDataset = readJson<ResourceDataset>('resources.json')
 
 const results: ValidationResult[] = [
+  validateUniqueIds('Items', items),
+  validateUniqueIds('Refiner recipes', refiner),
+  validateUniqueIds('Crafting recipes', crafting),
+  validateUniqueIds('Cooking recipes', cooking),
+  validateUniqueIds('Technology modules', tech),
+  validateUniqueIds('Portals', portals),
+  validateUniqueIds('Hints', hints),
+  validateCurrentRecipeCoverage(refiner, cooking),
   validateRefiner(refiner, itemsMap),
   validateCrafting(crafting, itemsMap, new Set(crafting.map((recipe) => recipe.id))),
   validateCooking(cooking, itemsMap),

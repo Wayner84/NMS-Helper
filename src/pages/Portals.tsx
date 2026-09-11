@@ -261,7 +261,6 @@ const Portals = (): JSX.Element => {
   }
 
   const handleImport = () => {
-    // eslint-disable-next-line no-alert
     const value = window.prompt('Paste JSON array of portal entries')
     if (!value) return
     try {

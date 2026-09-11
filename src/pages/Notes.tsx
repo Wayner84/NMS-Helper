@@ -164,7 +164,6 @@ const Notes = (): JSX.Element => {
   }
 
   const handleImport = () => {
-    // eslint-disable-next-line no-alert
     const value = window.prompt('Paste JSON array of notes to import')
     if (!value) return
     try {
@@ -394,12 +393,19 @@ const Notes = (): JSX.Element => {
       </section>
 
       {showModal ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true">
+        <div
+          className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/60 p-4 sm:items-center"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="note-dialog-title"
+        >
           <form
-            className="w-full max-w-xl space-y-4 rounded-xl border border-slate-700 bg-surface p-6 text-sm text-slate-200"
+            className="max-h-[calc(100vh-2rem)] w-full max-w-xl space-y-4 overflow-y-auto rounded-xl border border-slate-700 bg-surface p-6 text-sm text-slate-200"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-lg font-semibold text-primary">{form.id ? 'Edit note' : 'Add note'}</h3>
+            <h3 id="note-dialog-title" className="text-lg font-semibold text-primary">
+              {form.id ? 'Edit note' : 'Add note'}
+            </h3>
             <label className="flex flex-col gap-1">
               <span className="text-xs uppercase tracking-wide text-slate-400">Name</span>
               <input

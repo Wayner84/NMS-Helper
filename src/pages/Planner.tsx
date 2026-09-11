@@ -67,7 +67,6 @@ const Planner = (): JSX.Element => {
     const blob = JSON.stringify(planner, null, 2)
     try {
       await navigator.clipboard.writeText(blob)
-      // eslint-disable-next-line no-alert
       alert('Planner configuration copied to clipboard.')
     } catch (error) {
       console.error('Clipboard copy failed', error)
@@ -75,7 +74,6 @@ const Planner = (): JSX.Element => {
   }
 
   const handleImport = () => {
-    // eslint-disable-next-line no-alert
     const value = window.prompt('Paste planner JSON')
     if (!value) return
     try {
@@ -91,6 +89,9 @@ const Planner = (): JSX.Element => {
   return (
     <div className="flex flex-col gap-6">
       <section className="rounded-xl border border-slate-700 bg-surface/70 p-6">
+        <div className="mb-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-amber-100">
+          Experimental planner: module adjacency and supercharge data is incomplete, so scores and automatic suggestions are estimates only.
+        </div>
         <div className="grid gap-4 md:grid-cols-2">
           <label className="text-sm">
             <span className="mb-1 block text-xs uppercase tracking-wide text-slate-400">Platform</span>
@@ -249,33 +250,34 @@ const Planner = (): JSX.Element => {
             <p className="text-xs text-slate-400">Select a module then click a slot to place it. Add extras to the bench.</p>
             <div className="mt-3 space-y-2 max-h-[240px] overflow-y-auto pr-2">
               {moduleOptions.map((module) => (
-                <button
+                <div
                   key={module.id}
-                  type="button"
                   className={clsx(
-                    'w-full rounded border px-3 py-2 text-left text-sm',
+                    'w-full rounded border px-3 py-2 text-sm',
                     activeModuleId === module.id
                       ? 'border-primary bg-primary/20 text-primary'
                       : 'border-slate-700 bg-surface/70 text-slate-200 hover:border-primary'
                   )}
-                  onClick={() => setActiveModuleId(module.id)}
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">{module.name}</span>
-                    <span className="text-xs text-slate-400">Base {module.baseValue}</span>
-                  </div>
-                  <div className="mt-1 text-[11px] text-slate-400">Tags: {module.tags.join(', ')}</div>
+                  <button
+                    type="button"
+                    className="w-full text-left"
+                    onClick={() => setActiveModuleId(module.id)}
+                  >
+                    <span className="flex items-center justify-between">
+                      <span className="font-medium">{module.name}</span>
+                      <span className="text-xs text-slate-400">Base {module.baseValue}</span>
+                    </span>
+                    <span className="mt-1 block text-[11px] text-slate-400">Tags: {module.tags.join(', ')}</span>
+                  </button>
                   <button
                     type="button"
                     className="mt-2 inline-flex items-center rounded-full border border-slate-600 px-2 py-1 text-[11px] uppercase tracking-wide hover:border-primary"
-                    onClick={(event) => {
-                      event.stopPropagation()
-                      pushBenchModule(module.id)
-                    }}
+                    onClick={() => pushBenchModule(module.id)}
                   >
                     Add to bench
                   </button>
-                </button>
+                </div>
               ))}
             </div>
           </div>
